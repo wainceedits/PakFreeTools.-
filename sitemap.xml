@@ -2,40 +2,76 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/</loc>
+    </url>
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/percentage-calculator/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/percentage-calculator/</loc>
+    </url>
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/age-calculator/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/age-calculator/</loc>
+    </url>
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/bmi-calculator/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/bmi-calculator/</loc>
+    </url>
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/discount-calculator/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/discount-calculator/</loc>
+    </url>
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/profit-loss-calculator/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/profit-loss-calculator/</loc>
+    </url>
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/word-counter/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/word-counter/</loc>
+    </url>
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/character-counter/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/character-counter/</loc>
+    </url>
 
-  <url>
-    <loc>https://wainceedits.github.io/PakFreeTools.-/case-converter/</loc>
-  </url>
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/case-converter/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/qr-code-generator/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/password-generator/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/random-number-generator/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/image-resizer/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/image-compressor/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/about/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/contact/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/privacy-policy/</loc>
+    </url>
+
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/terms/</loc>
+    </url>
 
 </urlset>
