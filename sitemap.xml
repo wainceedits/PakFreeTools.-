@@ -108,6 +108,11 @@
         <loc>https://wainceedits.github.io/PakFreeTools.-/random-number-generator/</loc>
     </url>
 
+    <!-- Internet Tools -->
+    <url>
+        <loc>https://wainceedits.github.io/PakFreeTools.-/internet-speed-test/</loc>
+    </url>
+
     <!-- Information Pages -->
     <url>
         <loc>https://wainceedits.github.io/PakFreeTools.-/about/</loc>
@@ -126,6 +131,3 @@
     </url>
 
 </urlset>
-<url>
-  <loc>https://wainceedits.github.io/PakFreeTools.-/internet-speed-test/</loc>
-</url>
