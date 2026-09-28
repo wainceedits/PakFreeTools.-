@@ -1,505 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PakFreeTools — Free online tools for calculations, images, text, PDF, typing and everyday digital tasks. No signup required.">
-  <meta name="keywords" content="free online tools, PDF tools, image tools, Urdu typing test, English typing test, calculators, text tools">
-  <meta name="theme-color" content="#1769e0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:title" content="PakFreeTools — Free Online Tools">
-  <meta property="og:description" content="Fast, free and privacy-friendly online tools.">
-  <meta property="og:type" content="website">
+<title>PakFreeTools — Free Online Tools, Calculators & Utilities</title>
 
-  <title>PakFreeTools — Free Online Tools</title>
+<meta name="description" content="PakFreeTools provides free online calculators, text tools, image tools and useful utilities. Fast, simple and easy to use on mobile and desktop.">
 
-  <link rel="stylesheet" href="style.css">
+<meta name="keywords" content="free online tools, online calculators, image tools, text tools, PakFreeTools">
 
-  <!-- Free browser-side libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@2.0.4/dist/qrcode.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@4.2.1/dist/jspdf.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mammoth@1.13.0/mammoth.browser.min.js"></script>
+<link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+header{
+    background:#111827;
+    color:white;
+}
+
+.header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+header h1{
+    margin:0;
+    font-size:28px;
+}
+
+nav a{
+    color:#dbeafe;
+    text-decoration:none;
+    margin-left:15px;
+    font-size:14px;
+}
+
+.hero{
+    text-align:center;
+    padding:45px 20px 30px;
+}
+
+.hero h2{
+    font-size:34px;
+    margin:0 0 12px;
+    color:#111827;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#6b7280;
+    font-size:17px;
+}
+
+.search{
+    max-width:600px;
+    margin:25px auto 0;
+}
+
+.search input{
+    width:100%;
+    padding:15px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.tools{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:25px;
+}
+
+.tool{
+    background:white;
+    padding:22px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    transition:.2s;
+}
+
+.tool:hover{
+    transform:translateY(-3px);
+}
+
+.tool h3{
+    margin-top:0;
+    color:#111827;
+}
+
+.tool p{
+    color:#6b7280;
+    line-height:1.6;
+}
+
+.tool a{
+    display:inline-block;
+    margin-top:8px;
+    padding:10px 15px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.section{
+    background:white;
+    margin-top:35px;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+    line-height:1.7;
+}
+
+.section h2{
+    margin-top:0;
+}
+
+footer{
+    margin-top:40px;
+    background:#111827;
+    color:#d1d5db;
+    text-align:center;
+    padding:30px 15px;
+}
+
+footer a{
+    color:#dbeafe;
+    text-decoration:none;
+    margin:0 8px;
+}
+
+@media(max-width:850px){
+    .tools{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .header-inner{
+        display:block;
+    }
+
+    nav{
+        margin-top:12px;
+    }
+
+    nav a{
+        margin-left:0;
+        margin-right:12px;
+    }
+}
+
+@media(max-width:600px){
+    .tools{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="container nav">
+<header>
+<div class="container header-inner">
 
-    <a class="brand" href="#">
-      <span class="brand-mark">⚡</span>
-      <span>
-        <strong>PakFreeTools</strong>
-        <small>Simple. Fast. Free.</small>
-      </span>
-    </a>
+<h1>PakFreeTools</h1>
 
-    <nav class="desktop-nav">
-      <a href="#tools">Tools</a>
-      <a href="#categories">Categories</a>
-      <a href="#typing">Typing</a>
-      <a href="#about">About</a>
-    </nav>
+<nav>
+<a href="./">Home</a>
+<a href="./about/">About</a>
+<a href="./contact/">Contact</a>
+<a href="./privacy-policy/">Privacy</a>
+<a href="./terms/">Terms</a>
+</nav>
 
-    <div class="nav-actions">
-      <button id="themeButton" class="icon-button" aria-label="Toggle dark mode">🌙</button>
-      <button id="menuButton" class="icon-button mobile-menu-button" aria-label="Open menu">☰</button>
-    </div>
-  </div>
-
-  <div id="mobileMenu" class="mobile-menu">
-    <a href="#tools">Tools</a>
-    <a href="#categories">Categories</a>
-    <a href="#typing">Typing</a>
-    <a href="#about">About</a>
-  </div>
+</div>
 </header>
 
-<main>
+<main class="container">
 
 <section class="hero">
-  <div class="hero-glow glow-one"></div>
-  <div class="hero-glow glow-two"></div>
 
-  <div class="container hero-content">
+<h2>Free Online Tools</h2>
 
-    <div class="hero-badge">
-      <span>✦</span> 100% Free · No Signup Required
-    </div>
+<p>
+Useful calculators, text tools, image tools and online utilities —
+simple, fast and free to use.
+</p>
 
-    <h1>
-      Powerful Tools.
-      <span>Made Simple.</span>
-    </h1>
-
-    <p>
-      Free online tools for PDF, images, calculations, text,
-      typing and everyday digital tasks.
-    </p>
-
-    <div class="hero-search">
-      <span>⌕</span>
-      <input
-        id="toolSearch"
-        type="search"
-        placeholder="Search 30+ free tools..."
-        autocomplete="off"
-        aria-label="Search tools"
-      >
-      <kbd>⌘ K</kbd>
-    </div>
-
-    <div class="hero-stats">
-      <div><strong>30+</strong><span>Free Tools</span></div>
-      <div><strong>100%</strong><span>Browser Based</span></div>
-      <div><strong>0</strong><span>Signup Required</span></div>
-    </div>
-
-  </div>
-</section>
-
-<section class="trust-strip">
-  <div class="container trust-items">
-    <span>✓ No registration</span>
-    <span>✓ Fast processing</span>
-    <span>✓ Mobile friendly</span>
-    <span>✓ Files stay in browser whenever possible</span>
-  </div>
-</section>
-
-<section id="categories" class="container categories-section">
-
-  <div class="section-title">
-    <div>
-      <span class="eyebrow">EXPLORE</span>
-      <h2>Choose a category</h2>
-      <p>Find exactly what you need.</p>
-    </div>
-  </div>
-
-  <div class="category-grid">
-
-    <button class="category-card" data-category="calculators">
-      <span class="category-icon blue">🧮</span>
-      <span><strong>Calculators</strong><small>7 tools</small></span>
-      <b>→</b>
-    </button>
-
-    <button class="category-card" data-category="pdf">
-      <span class="category-icon red">📄</span>
-      <span><strong>PDF & Documents</strong><small>7 tools</small></span>
-      <b>→</b>
-    </button>
-
-    <button class="category-card" data-category="image">
-      <span class="category-icon purple">🖼️</span>
-      <span><strong>Image Tools</strong><small>6 tools</small></span>
-      <b>→</b>
-    </button>
-
-    <button class="category-card" data-category="text">
-      <span class="category-icon green">✍️</span>
-      <span><strong>Text & Urdu</strong><small>7 tools</small></span>
-      <b>→</b>
-    </button>
-
-    <button class="category-card" data-category="typing">
-      <span class="category-icon orange">⌨️</span>
-      <span><strong>Typing Tests</strong><small>2 tools</small></span>
-      <b>→</b>
-    </button>
-
-    <button class="category-card" data-category="utility">
-      <span class="category-icon cyan">⚡</span>
-      <span><strong>Utilities</strong><small>5 tools</small></span>
-      <b>→</b>
-    </button>
-
-  </div>
-</section>
-
-<section id="tools" class="container tools-section">
-
-  <div class="section-title tools-heading">
-    <div>
-      <span class="eyebrow">ALL TOOLS</span>
-      <h2>Everything you need</h2>
-      <p>Powerful tools without unnecessary complexity.</p>
-    </div>
-
-    <div class="tool-counter">
-      <strong id="toolCount">0</strong> tools
-    </div>
-  </div>
-
-  <div class="filter-row">
-    <button class="filter active" data-filter="all">All</button>
-    <button class="filter" data-filter="calculators">Calculators</button>
-    <button class="filter" data-filter="pdf">PDF</button>
-    <button class="filter" data-filter="image">Images</button>
-    <button class="filter" data-filter="text">Text</button>
-    <button class="filter" data-filter="typing">Typing</button>
-    <button class="filter" data-filter="utility">Utilities</button>
-  </div>
-
-  <div id="toolGrid" class="tool-grid">
-
-    <!-- CALCULATORS -->
-
-    <article class="tool-card" data-name="percentage calculator percentage" data-category="calculators">
-      <div class="tool-top"><span class="tool-icon blue">%</span><span class="tool-tag">CALCULATOR</span></div>
-      <h3>Percentage Calculator</h3>
-      <p>Calculate percentages quickly and accurately.</p>
-      <button onclick="openTool('percentage')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="age calculator date age" data-category="calculators">
-      <div class="tool-top"><span class="tool-icon orange">🎂</span><span class="tool-tag">CALCULATOR</span></div>
-      <h3>Age Calculator</h3>
-      <p>Find your exact age from your date of birth.</p>
-      <button onclick="openTool('age')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="bmi calculator health" data-category="calculators">
-      <div class="tool-top"><span class="tool-icon green">⚖️</span><span class="tool-tag">CALCULATOR</span></div>
-      <h3>BMI Calculator</h3>
-      <p>Calculate BMI from height and weight.</p>
-      <button onclick="openTool('bmi')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="discount calculator sale price" data-category="calculators">
-      <div class="tool-top"><span class="tool-icon red">🏷️</span><span class="tool-tag">CALCULATOR</span></div>
-      <h3>Discount Calculator</h3>
-      <p>Calculate discount amount and final price.</p>
-      <button onclick="openTool('discount')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="profit loss calculator business" data-category="calculators">
-      <div class="tool-top"><span class="tool-icon purple">📈</span><span class="tool-tag">BUSINESS</span></div>
-      <h3>Profit / Loss</h3>
-      <p>Calculate profit, loss and percentage.</p>
-      <button onclick="openTool('profit')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="average calculator mean" data-category="calculators">
-      <div class="tool-top"><span class="tool-icon cyan">∑</span><span class="tool-tag">CALCULATOR</span></div>
-      <h3>Average Calculator</h3>
-      <p>Calculate the average of multiple numbers.</p>
-      <button onclick="openTool('average')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="ratio calculator" data-category="calculators">
-      <div class="tool-top"><span class="tool-icon blue">÷</span><span class="tool-tag">CALCULATOR</span></div>
-      <h3>Ratio Calculator</h3>
-      <p>Calculate and simplify ratios.</p>
-      <button onclick="openTool('ratio')">Open Tool <span>→</span></button>
-    </article>
-
-    <!-- PDF -->
-
-    <article class="tool-card" data-name="jpg to pdf image pdf" data-category="pdf">
-      <div class="tool-top"><span class="tool-icon red">📄</span><span class="tool-tag">PDF</span></div>
-      <h3>JPG to PDF</h3>
-      <p>Convert one or multiple images into a PDF.</p>
-      <button onclick="openTool('jpgpdf')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="word to pdf docx pdf" data-category="pdf">
-      <div class="tool-top"><span class="tool-icon red">📝</span><span class="tool-tag">DOCUMENT</span></div>
-      <h3>Word to PDF</h3>
-      <p>Convert supported Word documents in your browser.</p>
-      <button onclick="openTool('wordpdf')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="pdf to word pdf doc" data-category="pdf">
-      <div class="tool-top"><span class="tool-icon red">📃</span><span class="tool-tag">DOCUMENT</span></div>
-      <h3>PDF to Word</h3>
-      <p>Extract text from a PDF into an editable document.</p>
-      <button onclick="openTool('pdfword')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="word to excel docx xlsx" data-category="pdf">
-      <div class="tool-top"><span class="tool-icon green">📊</span><span class="tool-tag">DOCUMENT</span></div>
-      <h3>Word to Excel</h3>
-      <p>Extract text and create a spreadsheet file.</p>
-      <button onclick="openTool('wordexcel')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="text to pdf" data-category="pdf">
-      <div class="tool-top"><span class="tool-icon red">📄</span><span class="tool-tag">PDF</span></div>
-      <h3>Text to PDF</h3>
-      <p>Turn your text into a clean PDF document.</p>
-      <button onclick="openTool('textpdf')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="pdf page text extractor" data-category="pdf">
-      <div class="tool-top"><span class="tool-icon orange">📑</span><span class="tool-tag">PDF</span></div>
-      <h3>PDF Text Extractor</h3>
-      <p>Extract readable text from PDF pages.</p>
-      <button onclick="openTool('pdftext')">Open Tool <span>→</span></button>
-    </article>
-
-    <!-- IMAGE -->
-
-    <article class="tool-card" data-name="image resizer resize photo" data-category="image">
-      <div class="tool-top"><span class="tool-icon purple">↔</span><span class="tool-tag">IMAGE</span></div>
-      <h3>Image Resizer</h3>
-      <p>Resize images directly on your device.</p>
-      <button onclick="openTool('resize')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="image compressor compress photo" data-category="image">
-      <div class="tool-top"><span class="tool-icon purple">🗜</span><span class="tool-tag">IMAGE</span></div>
-      <h3>Image Compressor</h3>
-      <p>Reduce image file size in your browser.</p>
-      <button onclick="openTool('compress')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="jpg png converter image converter" data-category="image">
-      <div class="tool-top"><span class="tool-icon purple">🖼</span><span class="tool-tag">IMAGE</span></div>
-      <h3>JPG / PNG Converter</h3>
-      <p>Convert images between JPG and PNG.</p>
-      <button onclick="openTool('converter')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="image cropper crop photo" data-category="image">
-      <div class="tool-top"><span class="tool-icon purple">✂</span><span class="tool-tag">IMAGE</span></div>
-      <h3>Image Cropper</h3>
-      <p>Crop an image to your required area.</p>
-      <button onclick="openTool('crop')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="image rotate" data-category="image">
-      <div class="tool-top"><span class="tool-icon purple">↻</span><span class="tool-tag">IMAGE</span></div>
-      <h3>Image Rotator</h3>
-      <p>Rotate images and download the result.</p>
-      <button onclick="openTool('rotate')">Open Tool <span>→</span></button>
-    </article>
-
-    <!-- TEXT -->
-
-    <article class="tool-card" data-name="word counter text words" data-category="text">
-      <div class="tool-top"><span class="tool-icon green">Aa</span><span class="tool-tag">TEXT</span></div>
-      <h3>Word Counter</h3>
-      <p>Count words and sentences instantly.</p>
-      <button onclick="openTool('word')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="character counter text" data-category="text">
-      <div class="tool-top"><span class="tool-icon green">ABC</span><span class="tool-tag">TEXT</span></div>
-      <h3>Character Counter</h3>
-      <p>Count characters with and without spaces.</p>
-      <button onclick="openTool('characters')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="case converter uppercase lowercase" data-category="text">
-      <div class="tool-top"><span class="tool-icon green">Aa</span><span class="tool-tag">TEXT</span></div>
-      <h3>Case Converter</h3>
-      <p>Convert text to uppercase or lowercase.</p>
-      <button onclick="openTool('case')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="urdu writing editor typing" data-category="text">
-      <div class="tool-top"><span class="tool-icon green">ا</span><span class="tool-tag">URDU</span></div>
-      <h3>Urdu Writing</h3>
-      <p>A clean writing space for Urdu and other languages.</p>
-      <button onclick="openTool('urdu')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="urdu word counter" data-category="text">
-      <div class="tool-top"><span class="tool-icon green">اردو</span><span class="tool-tag">URDU</span></div>
-      <h3>Urdu Word Counter</h3>
-      <p>Count Urdu words and characters.</p>
-      <button onclick="openTool('urducounter')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="qr code generator qr" data-category="utility">
-      <div class="tool-top"><span class="tool-icon blue">▦</span><span class="tool-tag">UTILITY</span></div>
-      <h3>QR Code Generator</h3>
-      <p>Create QR codes for links, text and contact data.</p>
-      <button onclick="openTool('qr')">Open Tool <span>→</span></button>
-    </article>
-
-    <!-- TYPING -->
-
-    <article class="tool-card" data-name="english typing test typing speed wpm" data-category="typing">
-      <div class="tool-top"><span class="tool-icon orange">EN</span><span class="tool-tag">TYPING</span></div>
-      <h3>English Typing Test</h3>
-      <p>Test typing speed, WPM and accuracy.</p>
-      <button onclick="openTool('typing-en')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="urdu typing test typing speed wpm" data-category="typing">
-      <div class="tool-top"><span class="tool-icon orange">اُ</span><span class="tool-tag">TYPING</span></div>
-      <h3>Urdu Typing Test</h3>
-      <p>Practice Urdu typing and measure your accuracy.</p>
-      <button onclick="openTool('typing-ur')">Open Tool <span>→</span></button>
-    </article>
-
-    <!-- UTILITY -->
-
-    <article class="tool-card" data-name="password generator security" data-category="utility">
-      <div class="tool-top"><span class="tool-icon blue">🔐</span><span class="tool-tag">SECURITY</span></div>
-      <h3>Password Generator</h3>
-      <p>Generate strong random passwords securely.</p>
-      <button onclick="openTool('password')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="random number generator random" data-category="utility">
-      <div class="tool-top"><span class="tool-icon blue">🎲</span><span class="tool-tag">UTILITY</span></div>
-      <h3>Random Number</h3>
-      <p>Generate a random number between two values.</p>
-      <button onclick="openTool('random')">Open Tool <span>→</span></button>
-    </article>
-
-    <article class="tool-card" data-name="text cleaner utility" data-category="utility">
-      <div class="tool-top"><span class="tool-icon blue">🧹</span><span class="tool-tag">UTILITY</span></div>
-      <h3>Text Cleaner</h3>
-      <p>Remove extra spaces and clean your text.</p>
-      <button onclick="openTool('cleaner')">Open Tool <span>→</span></button>
-    </article>
-
-  </div>
-
-  <div id="noResults" class="no-results hidden">
-    <div>🔎</div>
-    <h3>No tools found</h3>
-    <p>Try another search term.</p>
-    <button onclick="resetTools()">Show all tools</button>
-  </div>
+<div class="search">
+<input
+type="search"
+id="searchInput"
+placeholder="Search a tool..."
+onkeyup="searchTools()">
+</div>
 
 </section>
 
-<section id="typing" class="feature-section">
-  <div class="container feature-box">
-    <div>
-      <span class="eyebrow">TYPE FASTER</span>
-      <h2>Improve your typing speed</h2>
-      <p>Practice English or Urdu typing and see your WPM and accuracy instantly.</p>
-    </div>
-    <div class="feature-buttons">
-      <button class="primary-btn" onclick="openTool('typing-en')">English Test</button>
-      <button class="secondary-btn" onclick="openTool('typing-ur')">Urdu Test</button>
-    </div>
-  </div>
+<section class="tools" id="tools">
+
+<div class="tool">
+<h3>Percentage Calculator</h3>
+<p>Calculate percentages quickly and easily.</p>
+<a href="./percentage-calculator/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Age Calculator</h3>
+<p>Calculate your exact age from your date of birth.</p>
+<a href="./age-calculator/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>BMI Calculator</h3>
+<p>Calculate BMI using height and weight.</p>
+<a href="./bmi-calculator/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Discount Calculator</h3>
+<p>Calculate discount amount and final price.</p>
+<a href="./discount-calculator/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Profit Loss Calculator</h3>
+<p>Calculate profit, loss and percentage.</p>
+<a href="./profit-loss-calculator/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Word Counter</h3>
+<p>Count words, characters, sentences and paragraphs.</p>
+<a href="./word-counter/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Character Counter</h3>
+<p>Count characters, words, lines and more.</p>
+<a href="./character-counter/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Case Converter</h3>
+<p>Convert text to uppercase, lowercase and other cases.</p>
+<a href="./case-converter/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>QR Code Generator</h3>
+<p>Create QR codes for text, links and websites.</p>
+<a href="./qr-code-generator/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Password Generator</h3>
+<p>Generate strong random passwords online.</p>
+<a href="./password-generator/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Random Number Generator</h3>
+<p>Generate random numbers within any range.</p>
+<a href="./random-number-generator/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Image Resizer</h3>
+<p>Resize images directly in your browser.</p>
+<a href="./image-resizer/">Open Tool</a>
+</div>
+
+<div class="tool">
+<h3>Image Compressor</h3>
+<p>Reduce image file size while maintaining quality.</p>
+<a href="./image-compressor/">Open Tool</a>
+</div>
+
 </section>
 
-<section id="about" class="container about-section">
+<section class="section">
 
-  <div class="about-grid">
-    <div>
-      <span class="eyebrow">ABOUT US</span>
-      <h2>Useful tools without unnecessary barriers.</h2>
-    </div>
+<h2>About PakFreeTools</h2>
 
-    <div>
-      <p>
-        PakFreeTools is designed to make common digital tasks
-        faster and easier. Most tools process your files directly
-        in your browser.
-      </p>
+<p>
+PakFreeTools is a free online tools website designed to make common
+digital tasks easier. Our tools include calculators, text utilities,
+image tools and other useful browser-based utilities.
+</p>
 
-      <div class="privacy-note">
-        🔒 <strong>Privacy first:</strong>
-        Your files are processed in your browser whenever possible
-        and are not uploaded to our server.
-      </div>
-    </div>
-  </div>
+<p>
+Most tools are designed to work on both mobile phones and desktop
+computers without requiring an account.
+</p>
+
+<p>
+<a href="./about/">Learn more about PakFreeTools →</a>
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Why Use PakFreeTools?</h2>
+
+<ul>
+<li>Free online tools</li>
+<li>Simple and easy-to-use interface</li>
+<li>Mobile-friendly design</li>
+<li>No account required for basic tools</li>
+<li>Useful calculators and utilities in one place</li>
+</ul>
 
 </section>
 
 </main>
 
 <footer>
-  <div class="container footer-grid">
 
-    <div>
-      <a class="brand footer-brand" href="#">
-        <span class="brand-mark">⚡</span>
-        <span>
-          <strong>PakFreeTools</strong>
-          <small>Simple. Fast. Free.</small>
-        </span>
-      </a>
-      <p>Free online tools for everyone.</p>
-    </div>
+<p>© 2026 PakFreeTools — Free Online Tools</p>
 
-    <div>
-      <h4>Tools</h4>
-      <a href="#tools">All Tools</a>
-      <a href="#categories">Categories</a>
-      <a href="#typing">Typing Tests</a>
-    </div>
+<p>
+<a href="./about/">About Us</a>
+<a href="./contact/">Contact</a>
+<a href="./privacy-policy/">Privacy Policy</a>
+<a href="./terms/">Terms & Conditions</a>
+</p>
 
-    <div>
-      <h4>Privacy</h4>
-      <span>Browser processing</span>
-      <span>No signup</span>
-      <span>No unnecessary uploads</span>
-    </div>
-
-  </div>
-
-  <div class="container copyright">
-    © <span id="year"></span> PakFreeTools. All rights reserved.
-  </div>
 </footer>
 
-<div id="toolModal" class="modal hidden" aria-hidden="true">
-  <div class="modal-overlay" onclick="closeTool()"></div>
+<script>
 
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+function searchTools(){
 
-    <button class="modal-close" onclick="closeTool()" aria-label="Close">×</button>
+    const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
 
-    <div id="toolContent"></div>
+    const tools =
+        document.querySelectorAll(".tool");
 
-  </div>
-</div>
+    tools.forEach(function(tool){
 
-<div id="toast" class="toast"></div>
+        const text =
+            tool.textContent.toLowerCase();
 
-<script src="script.js"></script>
+        if(text.includes(input)){
+            tool.style.display = "";
+        }else{
+            tool.style.display = "none";
+        }
+
+    });
+}
+
+</script>
+
 </body>
 </html>
