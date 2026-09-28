@@ -1,32 +1,80 @@
 @media (max-width: 650px) {
+
+  /* =========================
+     GLOBAL MOBILE
+     ========================= */
+
   .container {
-    width: min(100% - 24px, 1160px);
+    width: min(100% - 28px, 1160px);
+    margin-inline: auto;
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
+
+  /* =========================
+     NAVBAR
+     ========================= */
+
   .nav {
-    height: 64px;
+    min-height: 64px;
+    height: auto;
+    padding: 10px 0;
   }
 
   .brand-mark {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
   }
 
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 7px;
+  }
+
+
+  /* =========================
+     HERO
+     ========================= */
+
   .hero {
-    padding: 75px 0 65px;
+    padding: 58px 0 48px;
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: 48px;
-    letter-spacing: -2.5px;
+    font-size: clamp(38px, 12vw, 50px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
   }
 
   .hero p {
+    max-width: 500px;
+    margin: 0 auto 25px;
     font-size: 15px;
+    line-height: 1.7;
   }
 
   .hero-search {
+    width: 100%;
     height: 58px;
+    border-radius: 16px;
+  }
+
+  .hero-search input {
+    min-width: 0;
+    font-size: 14px;
   }
 
   .hero-search kbd {
@@ -34,75 +82,257 @@
   }
 
   .hero-stats {
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 28px;
   }
 
   .hero-stats strong {
     font-size: 17px;
   }
 
+  .hero-stats span {
+    font-size: 11px;
+  }
+
+
+  /* =========================
+     TRUST BAR
+     ========================= */
+
   .trust-items {
-    padding: 15px 0;
-    gap: 10px 20px;
-    justify-content: flex-start;
+    padding: 14px 0;
+    gap: 10px 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    font-size: 12px;
+  }
+
+
+  /* =========================
+     SECTION HEADINGS
+     ========================= */
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
   }
 
   .section-title h2 {
     font-size: 27px;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
   }
 
-  .category-grid,
+  .section-title p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+
+  /* =========================
+     CATEGORY CARDS
+     ========================= */
+
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .category-card {
+    min-height: 130px;
+    padding: 18px 14px;
+    border-radius: 17px;
+  }
+
+  .category-card h3 {
+    font-size: 14px;
+  }
+
+  .category-card p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+
+  /* =========================
+     TOOL GRID
+     ========================= */
+
   .tool-grid {
     grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .tool-card {
+    padding: 18px;
+    border-radius: 18px;
   }
 
   .tool-card p {
     min-height: auto;
+    font-size: 13px;
+    line-height: 1.6;
   }
 
+  .tool-card h3 {
+    font-size: 16px;
+  }
+
+  .tool-card button,
+  .tool-card .btn {
+    min-height: 44px;
+    width: 100%;
+  }
+
+
+  /* =========================
+     FEATURE SECTION
+     ========================= */
+
   .feature-section {
-    padding: 55px 0;
+    padding: 50px 0;
+  }
+
+  .feature-box {
+    padding: 28px 20px;
+    border-radius: 22px;
   }
 
   .feature-box h2 {
-    font-size: 29px;
+    font-size: 28px;
+    line-height: 1.15;
+  }
+
+  .feature-box p {
+    font-size: 13px;
+    line-height: 1.7;
   }
 
   .feature-buttons {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .feature-buttons button {
-    flex: 1;
+    width: 100%;
+    flex: none;
+    min-height: 46px;
+  }
+
+
+  /* =========================
+     SPEED TEST / SPECIAL TOOL
+     ========================= */
+
+  .speed-test,
+  .speed-card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .speed-value {
+    font-size: 42px;
+  }
+
+
+  /* =========================
+     SEARCH RESULTS
+     ========================= */
+
+  .search-results {
+    width: 100%;
+    max-height: 65vh;
+    overflow-y: auto;
+  }
+
+  .search-result {
+    padding: 13px;
+  }
+
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  .footer {
+    padding: 42px 0 25px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 28px 18px;
   }
 
   .footer-grid > div:first-child {
     grid-column: 1 / -1;
   }
 
+  .footer h3 {
+    font-size: 15px;
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 12px;
+  }
+
+
+  /* =========================
+     MODAL
+     ========================= */
+
   .modal {
     padding: 8px;
+    align-items: flex-end;
   }
 
   .modal-box {
-    padding: 26px 17px;
+    width: 100%;
+    padding: 24px 17px;
     max-height: 94vh;
-    border-radius: 17px;
+    overflow-y: auto;
+    border-radius: 20px 20px 14px 14px;
+  }
+
+  .modal-title {
+    font-size: 21px;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .form-group.full {
     grid-column: auto;
   }
 
+
+  /* =========================
+     TYPING TOOL
+     ========================= */
+
   .typing-results {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
-}
+
+  .typing-result {
+    padding: 14px 10px;
+  }
+
+
+  /* =========================
+    
