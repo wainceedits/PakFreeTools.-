@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Character Counter — Free Online Character Counter | PakFreeTools</title>
+
+  <meta name="description" content="Free online character counter to count characters with and without spaces, words, lines and sentences. Fast and easy to use.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/character-counter/">
+
+  <meta property="og:title" content="Character Counter — Free Online Tool">
+  <meta property="og:description" content="Count characters, words, sentences and lines instantly with PakFreeTools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wainceedits.github.io/PakFreeTools.-/character-counter/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .home {
+      color: white;
+      text-decoration: none;
+      background: #2563eb;
+      padding: 9px 15px;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 0 18px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #6b7280;
+    }
+
+    .tool-box,
+    .content {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.07);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 300px;
+      padding: 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      resize: vertical;
+      font-size: 17px;
+      line-height: 1.6;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #2563eb;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      background: #f3f4f6;
+      padding: 16px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 25px;
+      color: #2563eb;
+    }
+
+    .stat span {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .clear-btn {
+      margin-top: 15px;
+      border: 0;
+      background: #dc2626;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .content {
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #111827;
+      margin-top: 25px;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 5px 8px 5px 0;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 700px) {
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .tool-box,
+      .content {
+        padding: 18px;
+      }
+
+      textarea {
+        min-height: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">PakFreeTools</div>
+    <a class="home" href="../">Home</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1>Character Counter</h1>
+    <p>Count characters, words, sentences and lines instantly.</p>
+  </section>
+
+  <section class="tool-box">
+
+    <textarea
+      id="textInput"
+      placeholder="Type or paste your text here..."
+    ></textarea>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong id="characters">0</strong>
+        <span>Characters</span>
+      </div>
+
+      <div class="stat">
+        <strong id="noSpaces">0</strong>
+        <span>Without Spaces</span>
+      </div>
+
+      <div class="stat">
+        <strong id="words">0</strong>
+        <span>Words</span>
+      </div>
+
+      <div class="stat">
+        <strong id="lines">0</strong>
+        <span>Lines</span>
+      </div>
+
+    </div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong id="sentences">0</strong>
+        <span>Sentences</span>
+      </div>
+
+      <div class="stat">
+        <strong id="paragraphs">0</strong>
+        <span>Paragraphs</span>
+      </div>
+
+    </div>
+
+    <button class="clear-btn" onclick="clearText()">
+      Clear Text
+    </button>
+
+  </section>
+
+
+  <section class="content">
+
+    <h2>Free Online Character Counter</h2>
+
+    <p>
+      PakFreeTools Character Counter is a free online tool for counting
+      characters in your text. It also provides word, line, sentence and
+      paragraph counts.
+    </p>
+
+    <p>
+      It can be useful when writing social media posts, articles,
+      assignments, messages, titles and other content where character limits
+      are important.
+    </p>
+
+
+    <h2>What Does the Character Counter Show?</h2>
+
+    <p>
+      The tool shows the total number of characters, characters without
+      spaces, words, lines, sentences and paragraphs.
+    </p>
+
+
+    <h2>How to Use the Character Counter</h2>
+
+    <ol>
+      <li>Type or paste your text into the text box.</li>
+      <li>The statistics update automatically.</li>
+      <li>Check the total characters and characters without spaces.</li>
+      <li>Use the other statistics to understand the structure of your text.</li>
+    </ol>
+
+
+    <h2>Why Count Characters?</h2>
+
+    <p>
+      Some websites and applications limit the number of characters that can
+      be entered. A character counter makes it easier to check your text
+      before submitting or publishing it.
+    </p>
+
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Is this character counter free?</h3>
+
+    <p>
+      Yes. You can use the character counter for free without creating an
+      account.
+    </p>
+
+    <h3>Does the counter include spaces?</h3>
+
+    <p>
+      Yes. The tool displays both total characters and characters without
+      spaces.
+    </p>
+
+    <h3>Can I use it on my phone?</h3>
+
+    <p>
+      Yes. The page is responsive and works on mobile phones, tablets and
+      desktop computers.
+    </p>
+
+    <h3>Does the tool count words too?</h3>
+
+    <p>
+      Yes. It automatically displays the number of words along with
+      character statistics.
+    </p>
+
+
+    <h2>Related Free Tools</h2>
+
+    <div class="related">
+      <a href="../word-counter/">Word Counter</a>
+      <a href="../case-converter/">Case Converter</a>
+      <a href="../urdu-typing-test/">Urdu Typing Test</a>
+      <a href="../english-typing-test/">English Typing Test</a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 PakFreeTools — Free Online Tools
+</footer>
+
+
+<script>
+
+const textInput = document.getElementById("textInput");
+
+textInput.addEventListener("input", updateCounter);
+
+function updateCounter() {
+
+  const text = textInput.value;
+  const trimmed = text.trim();
+
+  // Characters including spaces
+  const characters = text.length;
+
+  // Characters excluding spaces
+  const noSpaces = text.replace(/\s/g, "").length;
+
+  // Words
+  const words = trimmed
+    ? trimmed.split(/\s+/).length
+    : 0;
+
+  // Lines
+  const lines = text
+    ? text.split(/\r?\n/).length
+    : 0;
+
+  // Sentences
+  const sentenceMatches = trimmed.match(/[^.!?]+[.!?]+/g);
+
+  const sentences = sentenceMatches
+    ? sentenceMatches.length
+    : (trimmed ? 1 : 0);
+
+  // Paragraphs
+  const paragraphs = trimmed
+    ? trimmed.split(/\n\s*\n/).length
+    : 0;
+
+  document.getElementById("characters").textContent = characters;
+  document.getElementById("noSpaces").textContent = noSpaces;
+  document.getElementById("words").textContent = words;
+  document.getElementById("lines").textContent = lines;
+  document.getElementById("sentences").textContent = sentences;
+  document.getElementById("paragraphs").textContent = paragraphs;
+}
+
+
+function clearText() {
+
+  textInput.value = "";
+
+  updateCounter();
+
+  textInput.focus();
+}
+
+</script>
+
+</body>
+</html>
