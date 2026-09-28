@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BMI Calculator — Free Online BMI Calculator | PakFreeTools</title>
+
+  <meta name="description"
+        content="Calculate your Body Mass Index (BMI) online for free. Enter your height and weight to calculate BMI quickly. No signup required.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical"
+        href="https://wainceedits.github.io/PakFreeTools.-/bmi-calculator/">
+
+  <meta property="og:title"
+        content="BMI Calculator — Free Online BMI Calculator">
+
+  <meta property="og:description"
+        content="Calculate your BMI quickly and easily with our free online BMI calculator.">
+
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      padding: 18px 20px;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 35px 18px 60px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      color: #5b6475;
+      font-size: 17px;
+    }
+
+    .calculator,
+    section {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.07);
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      margin-top: 7px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+      border: 0;
+      border-radius: 9px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 18px;
+      background: #eef2ff;
+      border-radius: 9px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 12px;
+      background: #eef2ff;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #1d4ed8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="../">PakFreeTools</a>
+</header>
+
+<main>
+
+  <div class="hero">
+    <h1>BMI Calculator</h1>
+
+    <p class="intro">
+      Calculate your Body Mass Index (BMI) using your height
+      and weight with our free online BMI calculator.
+    </p>
+  </div>
+
+  <div class="calculator">
+
+    <label for="weight">
+      Weight (kg)
+    </label>
+
+    <input
+      id="weight"
+      type="number"
+      min="1"
+      step="0.1"
+      placeholder="Example: 70"
+    >
+
+    <label for="height">
+      Height (cm)
+    </label>
+
+    <input
+      id="height"
+      type="number"
+      min="1"
+      step="0.1"
+      placeholder="Example: 175"
+    >
+
+    <button onclick="calculateBMI()">
+      Calculate BMI
+    </button>
+
+    <div id="result">
+      Your BMI will appear here.
+    </div>
+
+  </div>
+
+  <section>
+    <h2>What is BMI?</h2>
+
+    <p>
+      BMI, or Body Mass Index, is a calculation based on a
+      person's weight and height. It is commonly used as a
+      general screening measure for weight categories.
+    </p>
+ 
