@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Case Converter — Free Online Text Case Converter | PakFreeTools</title>
+
+  <meta name="description" content="Convert text to uppercase, lowercase, title case, sentence case and capitalize each word with this free online case converter.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/case-converter/">
+
+  <meta property="og:title" content="Case Converter — Free Online Text Case Converter">
+  <meta property="og:description" content="Convert text between uppercase, lowercase, title case and sentence case instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wainceedits.github.io/PakFreeTools.-/case-converter/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .home {
+      color: white;
+      text-decoration: none;
+      background: #2563eb;
+      padding: 9px 15px;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 0 18px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #6b7280;
+    }
+
+    .tool-box,
+    .content {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.07);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 280px;
+      padding: 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      resize: vertical;
+      font-size: 17px;
+      line-height: 1.6;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #2563eb;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    button {
+      border: 0;
+      padding: 12px 10px;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: .9;
+    }
+
+    .secondary {
+      background: #4b5563;
+    }
+
+    .danger {
+      background: #dc2626;
+    }
+
+    .message {
+      margin-top: 12px;
+      color: #16a34a;
+      font-size: 14px;
+      min-height: 20px;
+    }
+
+    .content {
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #111827;
+      margin-top: 25px;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 5px 8px 5px 0;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 650px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .buttons {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tool-box,
+      .content {
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">PakFreeTools</div>
+    <a class="home" href="../">Home</a>
+  </div>
+</header>
+
+
+<main>
+
+  <section class="hero">
+    <h1>Case Converter</h1>
+    <p>Convert your text to uppercase, lowercase, title case and more.</p>
+  </section>
+
+
+  <section class="tool-box">
+
+    <textarea
+      id="textInput"
+      placeholder="Type or paste your text here..."
+    ></textarea>
+
+
+    <div class="buttons">
+
+      <button onclick="upperCase()">
+        UPPERCASE
+      </button>
+
+      <button onclick="lowerCase()">
+        lowercase
+      </button>
+
+      <button onclick="titleCase()">
+        Title Case
+      </button>
+
+      <button onclick="sentenceCase()">
+        Sentence case
+      </button>
+
+      <button onclick="capitalizeWords()">
+        Capitalize Words
+      </button>
+
+      <button class="secondary" onclick="copyText()">
+        Copy Text
+      </button>
+
+      <button class="danger" onclick="clearText()">
+        Clear
+      </button>
+
+    </div>
+
+    <div id="message" class="message"></div>
+
+  </section>
+
+
+  <section class="content">
+
+    <h2>Free Online Case Converter</h2>
+
+    <p>
+      PakFreeTools Case Converter is a free online text formatting tool that
+      lets you quickly change text between different letter cases.
+    </p>
+
+    <p>
+      You can convert text to uppercase, lowercase, title case, sentence
+      case or capitalize individual words without manually editing every
+      letter.
+    </p>
+
+
+    <h2>Available Text Cases</h2>
+
+    <h3>UPPERCASE</h3>
+    <p>
+      Converts all letters to capital letters.
+    </p>
+
+    <h3>lowercase</h3>
+    <p>
+      Converts all letters to lowercase letters.
+    </p>
+
+    <h3>Title Case</h3>
+    <p>
+      Capitalizes the first letter of each word.
+    </p>
+
+    <h3>Sentence Case</h3>
+    <p>
+      Makes the first letter of each sentence uppercase and the remaining
+      letters lowercase.
+    </p>
+
+    <h3>Capitalize Words</h3>
+    <p>
+      Capitalizes the first letter of every word while keeping the remaining
+      letters lowercase.
+    </p>
+
+
+    <h2>How to Use the Case Converter</h2>
+
+    <ol>
+      <li>Type or paste your text into the text box.</li>
+      <li>Select the case you want.</li>
+      <li>Your text will be converted instantly.</li>
+      <li>Use Copy Text to copy the converted result.</li>
+    </ol>
+
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Is the Case Converter free?</h3>
+
+    <p>
+      Yes. PakFreeTools Case Converter is free to use and does not require
+      registration.
+    </p>
+
+    <h3>Can I use this tool on mobile?</h3>
+
+    <p>
+      Yes. The tool is responsive and works on smartphones, tablets and
+      desktop computers.
+    </p>
+
+    <h3>Can I copy the converted text?</h3>
+
+    <p>
+      Yes. Click the Copy Text button after converting your text.
+    </p>
+
+    <h3>Does it work with long text?</h3>
+
+    <p>
+      Yes. You can paste paragraphs or larger amounts of text into the
+      converter.
+    </p>
+
+
+    <h2>Related Free Tools</h2>
+
+    <div class="related">
+      <a href="../word-counter/">Word Counter</a>
+      <a href="../character-counter/">Character Counter</a>
+      <a href="../urdu-typing-test/">Urdu Typing Test</a>
+      <a href="../english-typing-test/">English Typing Test</a>
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 PakFreeTools — Free Online Tools
+</footer>
+
+
+<script>
+
+const textInput = document.getElementById("textInput");
+const message = document.getElementById("message");
+
+
+function upperCase() {
+
+  textInput.value = textInput.value.toUpperCase();
+
+  showMessage("Text converted to UPPERCASE.");
+}
+
+
+function lowerCase() {
+
+  textInput.value = textInput.value.toLowerCase();
+
+  showMessage("Text converted to lowercase.");
+}
+
+
+function titleCase() {
+
+  textInput.value = textInput.value
+    .toLowerCase()
+    .replace(/\b\w/g, letter => letter.toUpperCase());
+
+  showMessage("Text converted to Title Case.");
+}
+
+
+function capitalizeWords() {
+
+  textInput.value = textInput.value
+    .toLowerCase()
+    .replace(/\b\w/g, letter => letter.toUpperCase());
+
+  showMessage("Words capitalized.");
+}
+
+
+function sentenceCase() {
+
+  let text = textInput.value.toLowerCase();
+
+  text = text.replace(
+    /(^\s*|[.!?]\s+)([a-z])/g,
+    function(match, prefix, letter) {
+      return prefix + letter.toUpperCase();
+    }
+  );
+
+  textInput.value = text;
+
+  showMessage("Text converted to Sentence case.");
+}
+
+
+async function copyText() {
+
+  if (!textInput.value) {
+    showMessage("There is no text to copy.");
+    return;
+  }
+
+  try {
+
+    await navigator.clipboard.writeText(textInput.value);
+
+    showMessage("Text copied successfully.");
+
+  } catch (error) {
+
+    textInput.select();
+    document.execCommand("copy");
+
+    showMessage("Text copied successfully.");
+  }
+}
+
+
+function clearText() {
+
+  textInput.value = "";
+
+  showMessage("Text cleared.");
+
+  textInput.focus();
+}
+
+
+function showMessage(text) {
+
+  message.textContent = text;
+
+  setTimeout(() => {
+    message.textContent = "";
+  }, 2000);
+}
+
+</script>
+
+</body>
+</html>
