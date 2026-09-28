@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Word Counter — Free Online Word Counter | PakFreeTools</title>
+
+  <meta name="description" content="Count words, characters, sentences and paragraphs online with our free word counter. Fast, accurate and easy to use on mobile and desktop.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/word-counter/">
+
+  <meta property="og:title" content="Word Counter — Free Online Word Counter">
+  <meta property="og:description" content="Free online word counter to count words, characters, sentences and paragraphs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wainceedits.github.io/PakFreeTools.-/word-counter/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .home {
+      color: white;
+      text-decoration: none;
+      background: #2563eb;
+      padding: 9px 15px;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 0 18px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #6b7280;
+      margin-top: 0;
+    }
+
+    .tool-box {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.08);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 300px;
+      padding: 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      resize: vertical;
+      font-size: 17px;
+      line-height: 1.6;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #2563eb;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      background: #f3f4f6;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 25px;
+      color: #2563eb;
+    }
+
+    .stat span {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .clear-btn {
+      margin-top: 15px;
+      border: 0;
+      background: #dc2626;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .content {
+      background: white;
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 14px;
+    }
+
+    h2 {
+      color: #111827;
+      margin-top: 25px;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 5px 8px 5px 0;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 800px) {
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tool-box,
+      .content {
+        padding: 18px;
+      }
+
+      textarea {
+        min-height: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">PakFreeTools</div>
+    <a class="home" href="../">Home</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1>Word Counter</h1>
+    <p>Count words, characters, sentences and paragraphs instantly.</p>
+  </section>
+
+  <section class="tool-box">
+
+    <textarea id="textInput"
+      placeholder="Type or paste your text here..."></textarea>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong id="words">0</strong>
+        <span>Words</span>
+      </div>
+
+      <div class="stat">
+        <strong id="characters">0</strong>
+        <span>Characters</span>
+      </div>
+
+      <div class="stat">
+        <strong id="noSpaces">0</strong>
+        <span>Without Spaces</span>
+      </div>
+
+      <div class="stat">
+        <strong id="sentences">0</strong>
+        <span>Sentences</span>
+      </div>
+
+      <div class="stat">
+        <strong id="paragraphs">0</strong>
+        <span>Paragraphs</span>
+      </div>
+
+    </div>
+
+    <div class="stat" style="margin-top:12px;">
+      <strong id="readingTime">0 min</strong>
+      <span>Estimated Reading Time</span>
+    </div>
+
+    <button class="clear-btn" onclick="clearText()">Clear Text</button>
+
+  </section>
+
+
+  <section class="content">
+
+    <h2>Free Online Word Counter</h2>
+
+    <p>
+      PakFreeTools Word Counter is a free online tool that helps you count
+      words and characters quickly. Simply type or paste your text into the
+      box and the results will update automatically.
+    </p>
+
+    <p>
+      This tool can be useful for students, writers, bloggers, social media
+      users and anyone who needs to check the length of their text.
+    </p>
+
+
+    <h2>What Does This Word Counter Count?</h2>
+
+    <p>
+      The tool provides several useful statistics including total words,
+      characters, characters without spaces, sentences, paragraphs and
+      estimated reading time.
+    </p>
+
+
+    <h2>How to Use the Word Counter</h2>
+
+    <ol>
+      <li>Type or paste your text into the text box.</li>
+      <li>The word count updates automatically.</li>
+      <li>Check characters, sentences and paragraphs.</li>
+      <li>Use the estimated reading time to understand how long the text may take to read.</li>
+    </ol>
+
+
+    <h2>Is This Word Counter Free?</h2>
+
+    <p>
+      Yes. The PakFreeTools Word Counter is free to use and does not require
+      registration or an account.
+    </p>
+
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How does the word counter work?</h3>
+    <p>
+      It analyzes the text you enter and calculates the number of words,
+      characters, sentences and paragraphs directly in your browser.
+    </p>
+
+    <h3>Does it work on mobile phones?</h3>
+    <p>
+      Yes. The tool is designed to work on smartphones, tablets and desktop
+      computers.
+    </p>
+
+    <h3>Does the tool save my text?</h3>
+    <p>
+      The counting is performed directly in your browser. No account is
+      required to use the tool.
+    </
