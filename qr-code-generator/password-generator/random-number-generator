@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Random Number Generator — Free Online Tool | PakFreeTools</title>
+<meta name="description" content="Generate random numbers between any minimum and maximum range with this free online random number generator. Fast, simple and easy to use.">
+<meta name="keywords" content="random number generator, random number online, number generator, free random number generator">
+<link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/random-number-generator/">
+
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+header{
+    background:#111827;
+    color:white;
+    padding:22px 20px;
+}
+header h1{
+    margin:0;
+    font-size:28px;
+}
+nav{
+    margin-top:8px;
+}
+nav a{
+    color:#dbeafe;
+    text-decoration:none;
+    margin-right:14px;
+    font-size:14px;
+}
+.card{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+label{
+    display:block;
+    font-weight:bold;
+    margin:15px 0 7px;
+}
+input{
+    width:100%;
+    padding:13px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:16px;
+}
+button{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:0;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+button:hover{
+    background:#1d4ed8;
+}
+.result{
+    margin-top:22px;
+    padding:25px;
+    background:#eef2ff;
+    border-radius:10px;
+    text-align:center;
+}
+.result span{
+    display:block;
+    font-size:42px;
+    font-weight:bold;
+    color:#1d4ed8;
+}
+.info{
+    line-height:1.7;
+}
+.related a{
+    display:inline-block;
+    margin:6px;
+    padding:9px 13px;
+    background:#eef2ff;
+    border-radius:7px;
+    text-decoration:none;
+    color:#1d4ed8;
+}
+footer{
+    text-align:center;
+    padding:30px 10px;
+    color:#6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<h1>PakFreeTools</h1>
+<nav>
+<a href="../">Home</a>
+<a href="../percentage-calculator/">Percentage Calculator</a>
+<a href="../age-calculator/">Age Calculator</a>
+<a href="../password-generator/">Password Generator</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+
+<div class="card">
+<h2>Random Number Generator</h2>
+<p>Generate a random number between your chosen minimum and maximum values.</p>
+
+<label for="min">Minimum Number</label>
+<input type="number" id="min" value="1">
+
+<label for="max">Maximum Number</label>
+<input type="number" id="max" value="100">
+
+<button onclick="generateNumber()">Generate Random Number</button>
+
+<div class="result">
+<p>Your Random Number</p>
+<span id="result">—</span>
+</div>
+</div>
+
+<div class="card info">
+<h2>Free Random Number Generator</h2>
+
+<p>
+Our Random Number Generator is a simple and free online tool for generating
+random integers within a custom range. Enter the minimum and maximum numbers
+and click the generate button.
+</p>
+
+<h2>How to Use the Random Number Generator</h2>
+<ol>
+<li>Enter the minimum number.</li>
+<li>Enter the maximum number.</li>
+<li>Click the <strong>Generate Random Number</strong> button.</li>
+<li>Your random number will appear instantly.</li>
+</ol>
+
+<h2>Where Can Random Numbers Be Used?</h2>
+<p>
+Random numbers can be useful for games, lucky draws, testing, classroom
+activities, choosing numbers, contests and many other everyday tasks.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is this random number generator free?</h3>
+<p>Yes. You can use this tool completely free of charge.</p>
+
+<h3>Can I choose my own range?</h3>
+<p>Yes. Enter any minimum and maximum integer supported by your browser.</p>
+
+<h3>Does the tool require an account?</h3>
+<p>No. You can generate random numbers directly in your browser without creating an account.</p>
+</div>
+
+<div class="card related">
+<h2>Related Free Tools</h2>
+
+<a href="../percentage-calculator/">Percentage Calculator</a>
+<a href="../age-calculator/">Age Calculator</a>
+<a href="../password-generator/">Password Generator</a>
+<a href="../word-counter/">Word Counter</a>
+<a href="../character-counter/">Character Counter</a>
+<a href="../case-converter/">Case Converter</a>
+</div>
+
+</main>
+
+<footer>
+© 2026 PakFreeTools — Free Online Tools
+</footer>
+
+<script>
+function secureRandomInt(min, max) {
+
+    if (min > max) {
+        [min, max] = [max, min];
+    }
+
+    const range = max - min + 1;
+
+    if (range <= 0) {
+        throw new Error("Invalid range");
+    }
+
+    const maxUint32 = 4294967296;
+    const limit = Math.floor(maxUint32 / range) * range;
+
+    const array = new Uint32Array(1);
+
+    let randomValue;
+
+    do {
+        crypto.getRandomValues(array);
+        randomValue = array[0];
+    } while (randomValue >= limit);
+
+    return min + (randomValue % range);
+}
+
+function generateNumber() {
+
+    const min = Number(document.getElementById("min").value);
+    const max = Number(document.getElementById("max").value);
+    const result = document.getElementById("result");
+
+    if (!Number.isInteger(min) || !Number.isInteger(max)) {
+        result.textContent = "Invalid";
+        return;
+    }
+
+    try {
+        result.textContent = secureRandomInt(min, max);
+    } catch {
+        result.textContent = "Invalid";
+    }
+}
+</script>
+
+</body>
+</html>
