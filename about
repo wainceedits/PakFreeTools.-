@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us — PakFreeTools | Free Online Tools</title>
+
+<meta name="description" content="Learn about PakFreeTools, a free online tools website providing simple, useful and easy-to-use tools for everyday tasks.">
+
+<meta name="keywords" content="PakFreeTools, free online tools, online calculators, image tools, text tools">
+
+<link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/about/">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+    line-height:1.7;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+header{
+    background:#111827;
+    color:white;
+    padding:22px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:28px;
+}
+
+nav{
+    margin-top:8px;
+}
+
+nav a{
+    color:#dbeafe;
+    text-decoration:none;
+    margin-right:15px;
+    font-size:14px;
+}
+
+.card{
+    background:white;
+    margin-top:25px;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+h2{
+    color:#111827;
+    margin-top:0;
+}
+
+h3{
+    color:#1d4ed8;
+}
+
+.highlight{
+    background:#eef2ff;
+    padding:20px;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+.tools{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:15px;
+}
+
+.tools a{
+    background:#f1f5f9;
+    padding:13px;
+    border-radius:8px;
+    text-decoration:none;
+    color:#1d4ed8;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:30px 10px;
+    color:#6b7280;
+}
+
+@media(max-width:600px){
+    .tools{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<h1>PakFreeTools</h1>
+
+<nav>
+<a href="../">Home</a>
+<a href="../about/">About Us</a>
+<a href="../contact/">Contact</a>
+<a href="../privacy-policy/">Privacy Policy</a>
+</nav>
+
+</div>
+</header>
+
+<main class="container">
+
+<div class="card">
+
+<h2>About PakFreeTools</h2>
+
+<p>
+Welcome to <strong>PakFreeTools</strong>, a free online tools website
+created to make everyday digital tasks simple, fast and accessible.
+</p>
+
+<p>
+Our goal is to provide useful browser-based tools that anyone can use
+without installing complicated software or creating an account.
+</p>
+
+<div class="highlight">
+
+<strong>Our Mission</strong>
+
+<p>
+To provide simple, useful and easy-to-use online tools that save time
+and make common digital tasks easier for everyone.
+</p>
+
+</div>
+
+<h2>What We Offer</h2>
+
+<p>
+PakFreeTools provides a growing collection of free online utilities,
+including calculators, text tools, image tools and other helpful
+browser-based utilities.
+</p>
+
+<div class="tools">
+
+<a href="../percentage-calculator/">Percentage Calculator</a>
+
+<a href="../age-calculator/">Age Calculator</a>
+
+<a href="../bmi-calculator/">BMI Calculator</a>
+
+<a href="../discount-calculator/">Discount Calculator</a>
+
+<a href="../profit-loss-calculator/">Profit Loss Calculator</a>
+
+<a href="../word-counter/">Word Counter</a>
+
+<a href="../character-counter/">Character Counter</a>
+
+<a href="../case-converter/">Case Converter</a>
+
+<a href="../qr-code-generator/">QR Code Generator</a>
+
+<a href="../password-generator/">Password Generator</a>
+
+<a href="../random-number-generator/">Random Number Generator</a>
+
+<a href="../image-resizer/">Image Resizer</a>
+
+<a href="../image-compressor/">Image Compressor</a>
+
+</div>
+
+<h2>Free and Easy to Use</h2>
+
+<p>
+Our tools are designed with simplicity in mind. Most tools work directly
+in your web browser and are designed to work on both mobile phones and
+desktop computers.
+</p>
+
+<h2>Privacy and Security</h2>
+
+<p>
+We respect user privacy and aim to provide tools that minimize unnecessary
+data collection. Where a tool can process information directly in the
+browser, we aim to keep that processing on the user's device.
+</p>
+
+<p>
+For more information, please read our
+<a href="../privacy-policy/">Privacy Policy</a>.
+</p>
+
+<h2>Our Future Plans</h2>
+
+<p>
+We plan to continue adding useful tools and improving the existing tools
+based on user needs and feedback.
+</p>
+
+<h2>Contact Us</h2>
+
+<p>
+If you have a question, suggestion, correction or idea for a new tool,
+you can contact us through our
+<a href="../contact/">Contact Us</a> page.
+</p>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 PakFreeTools — Free Online Tools
+</footer>
+
+</body>
+</html>
