@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Image Compressor — Free Online Image Compressor | PakFreeTools</title>
+<meta name="description" content="Compress JPG, PNG and WEBP images online for free. Reduce image file size directly in your browser without uploading images to a server.">
+<meta name="keywords" content="image compressor, compress image online, reduce image size, JPG compressor, PNG compressor, WEBP compressor">
+<link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/image-compressor/">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+header{
+    background:#111827;
+    color:white;
+    padding:22px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:28px;
+}
+
+nav{
+    margin-top:8px;
+}
+
+nav a{
+    color:#dbeafe;
+    text-decoration:none;
+    margin-right:14px;
+    font-size:14px;
+}
+
+.card{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+input[type="file"],
+input[type="range"],
+select{
+    width:100%;
+    margin-top:8px;
+}
+
+input[type="file"],
+select{
+    padding:12px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:16px;
+    background:white;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:18px;
+}
+
+.quality-value{
+    text-align:center;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:0;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+button:disabled{
+    background:#9ca3af;
+    cursor:not-allowed;
+}
+
+.preview{
+    text-align:center;
+    margin-top:20px;
+}
+
+.preview img{
+    max-width:100%;
+    max-height:350px;
+    border-radius:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:20px;
+}
+
+.stat{
+    background:#eef2ff;
+    padding:18px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:22px;
+    margin-top:5px;
+}
+
+.download{
+    display:none;
+    margin-top:20px;
+    text-align:center;
+}
+
+.download a{
+    display:inline-block;
+    background:#16a34a;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.info{
+    line-height:1.7;
+}
+
+.related a{
+    display:inline-block;
+    margin:6px;
+    padding:9px 13px;
+    background:#eef2ff;
+    border-radius:7px;
+    text-decoration:none;
+    color:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:30px 10px;
+    color:#6b7280;
+}
+
+@media(max-width:600px){
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<h1>PakFreeTools</h1>
+
+<nav>
+<a href="../">Home</a>
+<a href="../image-resizer/">Image Resizer</a>
+<a href="../qr-code-generator/">QR Code Generator</a>
+<a href="../password-generator/">Password Generator</a>
+</nav>
+
+</div>
+</header>
+
+<main class="container">
+
+<div class="card">
+
+<h2>Free Image Compressor</h2>
+
+<p>
+Reduce the file size of your images while keeping good visual quality.
+Your image is processed directly in your browser.
+</p>
+
+<label for="imageInput">Choose Image</label>
+<input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp">
+
+<div class="preview">
+<img id="preview" style="display:none;">
+</div>
+
+<div id="originalInfo"></div>
+
+<label for="quality">Compression Quality</label>
+<input type="range" id="quality" min="10" max="100" value="75">
+
+<div class="quality-value">
+Quality: <span id="qualityValue">75</span>%
+</div>
+
+<label for="format">Output Format</label>
+<select id="format">
+<option value="image/jpeg">JPG / JPEG</option>
+<option value="image/webp">WEBP</option>
+</select>
+
+<button id="compressBtn" disabled>
+Compress Image
+</button>
+
+<div class="stats" id="stats" style="display:none;">
+
+<div class="stat">
+Original Size
+<strong id="originalSize">—</strong>
+</div>
+
+<div class="stat">
+Compressed Size
+<strong id="compressedSize">—</strong>
+</div>
+
+</div>
+
+<div class="download" id="downloadBox">
+<a id="downloadLink" download="compressed-image.jpg">
+Download Compressed Image
+</a>
+</div>
+
+</div>
+
+<div class="card info">
+
+<h2>Compress Images Online for Free</h2>
+
+<p>
+PakFreeTools Image Compressor helps reduce image file size directly in your
+web browser. Smaller images can be easier to store, share and use on websites.
+</p>
+
+<h2>How to Compress an Image</h2>
+
+<ol>
+<li>Select a JPG, PNG or WEBP image.</li>
+<li>Choose your preferred compression quality.</li>
+<li>Select JPG or WEBP as the output format.</li>
+<li>Click <strong>Compress Image</strong>.</li>
+<li>Download the compressed image.</li>
+</ol>
+
+<h2>Does the Image Get Uploaded?</h2>
+
+<p>
+No. The compression process takes place directly in your browser using
+JavaScript and the HTML Canvas API. Your selected image does not need to
+be uploaded to a server for compression.
+</p>
+
+<h2>Why Compress Images?</h2>
+
+<p>
+Image compression can reduce file size and make images easier to upload,
+share and use on websites. It can also help reduce storage requirements.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is this image compressor free?</h3>
+<p>Yes. You can use the tool for free.</p>
+
+<h3>Which image formats are supported?</h3>
+<p>
+The tool accepts JPG, PNG and WEBP images. The output can be generated
+as JPG or WEBP.
+</p>
+
+<h3>Will compression reduce image quality?</h3>
+<p>
+Compression can reduce image quality depending on the selected quality
+setting. A higher quality value generally keeps more visual detail.
+</p>
+
+<h3>Can I compress images on my phone?</h3>
+<p>
+Yes. The tool is designed to work in modern mobile and desktop browsers.
+</p>
+
+</div>
+
+<div class="card related">
+
+<h2>Related Free Tools</h2>
+
+<a href="../image-resizer/">Image Resizer</a>
+<a href="../qr-code-generator/">QR Code Generator</a>
+<a href="../password-generator/">Password Generator</a>
+<a href="../word-counter/">Word Counter</a>
+<a href="../character-counter/">Character Counter</a>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 PakFreeTools — Free Online Tools
+</footer>
+
+<script>
+
+const imageInput = document.getElementById("imageInput");
+const preview = document.getElementById("preview");
+const quality = document.getElementById("quality");
+const qualityValue = document.getElementById("qualityValue");
+const format = document.getElementById("format");
+const compressBtn = document.getElementById("compressBtn");
+const originalInfo = document.getElementById("originalInfo");
+const stats = document.getElementById("stats");
+const originalSize = document.getElementById("originalSize");
+const compressedSize = document.getElementById("compressedSize");
+const downloadBox = document.getElementById("downloadBox");
+const downloadLink = document.getElementById("downloadLink");
+
+let selectedFile = null;
+
+quality.addEventListener("input", function(){
+    qualityValue.textContent = this.value;
+});
+
+imageInput.addEventListener("change", function(){
+
+    const file = this.files[0];
+
+    if(!file){
+        return;
+    }
+
+    selectedFile = file;
+
+    originalSize.textContent = formatBytes(file.size);
+
+    originalInfo.innerHTML =
+        "<p><strong>Original file:</strong> " +
+        file.name +
+        " (" +
+        formatBytes(file.size) +
+        ")</p>";
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+        preview.src = e.target.result;
+        preview.style.display = "block";
+    };
+
+    reader.readAsDataURL(file);
+
+    compressBtn.disabled = false;
+    stats.style.display = "none";
+    downloadBox.style.display = "none";
+});
+
+compressBtn.addEventListener("click", function(){
+
+    if(!selectedFile){
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+        const img = new Image();
+
+        img.onload = function(){
+
+            const canvas = document.createElement("canvas");
+
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            const ctx = canvas.getContext("2d");
+
+            ctx.drawImage(
+                img,
+                0,
+                0,
+                img.width,
+                img.height
+            );
+
+            const qualityValueNumber =
+                Number(quality.value) / 100;
+
+            canvas.toBlob(function(blob){
+
+                if(!blob){
+                    alert("Compression failed. Please try another image.");
+                    return;
+                }
+
+                const url = URL.createObjectURL(blob);
+
+                compressedSize.textContent =
+                    formatBytes(blob.size);
+
+                stats.style.display = "grid";
+
+                downloadLink.href = url;
+
+                if(format.value === "image/webp"){
+                    downloadLink.download = "compressed-image.webp";
+                }else{
+                    downloadLink.download = "compressed-image.jpg";
+                }
+
+                downloadBox.style.display = "block";
+
+            }, format.value, qualityValueNumber);
+
+        };
+
+        img.src = e.target.result;
+    };
+
+    reader.readAsDataURL(selectedFile);
+
+});
+
+function formatBytes(bytes){
+
+    if(bytes === 0){
+        return "0 Bytes";
+    }
+
+    const units = [
+        "Bytes",
+        "KB",
+        "MB",
+        "GB"
+    ];
+
+    const index =
+        Math.floor(Math.log(bytes) / Math.log(1024));
+
+    return (
+        parseFloat(
+            (bytes / Math.pow(1024,index)).toFixed(2)
+        )
+        + " "
+        + units[index]
+    );
+}
+
+</script>
+
+</body>
+</html>
