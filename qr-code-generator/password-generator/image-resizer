@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Image Resizer — Free Online Image Resizer | PakFreeTools</title>
+<meta name="description" content="Resize images online for free. Change image width and height directly in your browser without uploading your image to a server.">
+<meta name="keywords" content="image resizer, resize image online, free image resizer, photo resizer, resize JPG PNG">
+<link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/image-resizer/">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+header{
+    background:#111827;
+    color:white;
+    padding:22px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:28px;
+}
+
+nav{
+    margin-top:8px;
+}
+
+nav a{
+    color:#dbeafe;
+    text-decoration:none;
+    margin-right:14px;
+    font-size:14px;
+}
+
+.card{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+input[type="file"],
+input[type="number"]{
+    width:100%;
+    padding:12px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:16px;
+    margin-top:7px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:0;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+button:disabled{
+    background:#9ca3af;
+    cursor:not-allowed;
+}
+
+.preview{
+    text-align:center;
+    margin-top:20px;
+}
+
+.preview img{
+    max-width:100%;
+    max-height:400px;
+    border-radius:10px;
+}
+
+.dimensions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.download{
+    display:none;
+    text-align:center;
+    margin-top:20px;
+}
+
+.download a{
+    display:inline-block;
+    padding:12px 20px;
+    background:#16a34a;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.info{
+    line-height:1.7;
+}
+
+.related a{
+    display:inline-block;
+    margin:6px;
+    padding:9px 13px;
+    background:#eef2ff;
+    border-radius:7px;
+    text-decoration:none;
+    color:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:30px 10px;
+    color:#6b7280;
+}
+
+@media(max-width:600px){
+    .dimensions{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<h1>PakFreeTools</h1>
+
+<nav>
+<a href="../">Home</a>
+<a href="../image-compressor/">Image Compressor</a>
+<a href="../qr-code-generator/">QR Code Generator</a>
+<a href="../password-generator/">Password Generator</a>
+</nav>
+
+</div>
+</header>
+
+<main class="container">
+
+<div class="card">
+
+<h2>Free Image Resizer</h2>
+
+<p>
+Resize your JPG, PNG, WEBP and other browser-supported images quickly and easily.
+Your image is processed directly in your browser.
+</p>
+
+<label for="imageInput">Choose Image</label>
+<input type="file" id="imageInput" accept="image/*">
+
+<div id="originalInfo"></div>
+
+<div class="preview">
+<img id="preview" style="display:none;">
+</div>
+
+<div class="dimensions">
+
+<div>
+<label for="width">Width (px)</label>
+<input type="number" id="width" min="1">
+</div>
+
+<div>
+<label for="height">Height (px)</label>
+<input type="number" id="height" min="1">
+</div>
+
+</div>
+
+<label>
+<input type="checkbox" id="lockRatio" checked>
+ Keep aspect ratio
+</label>
+
+<button id="resizeBtn" disabled>Resize Image</button>
+
+<div class="download" id="downloadBox">
+<a id="downloadLink" download="resized-image.png">
+Download Resized Image
+</a>
+</div>
+
+</div>
+
+<div class="card info">
+
+<h2>Resize Images Online for Free</h2>
+
+<p>
+PakFreeTools Image Resizer lets you change the dimensions of an image
+without installing software. Select an image, enter the required width
+and height, and download the resized image.
+</p>
+
+<h2>How to Resize an Image</h2>
+
+<ol>
+<li>Select an image from your device.</li>
+<li>Enter the desired width and height.</li>
+<li>Keep aspect ratio enabled to prevent distortion.</li>
+<li>Click <strong>Resize Image</strong>.</li>
+<li>Download your resized image.</li>
+</ol>
+
+<h2>Is My Image Uploaded?</h2>
+
+<p>
+No. The image is processed directly inside your browser using JavaScript.
+The page does not need to upload your image to a server for resizing.
+</p>
+
+<h2>Why Resize an Image?</h2>
+
+<p>
+Resizing images can help prepare photos for websites, social media,
+documents, profiles and other online uses where a specific image size
+is required.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is the image resizer free?</h3>
+<p>Yes. This image resizing tool is free to use.</p>
+
+<h3>Can I resize JPG and PNG images?</h3>
+<p>Yes. The tool supports common image formats that your browser can open.</p>
+
+<h3>Does resizing reduce image quality?</h3>
+<p>
+Changing image dimensions can affect quality, especially when making an
+image much larger. For best results, avoid unnecessary enlargement.
+</p>
+
+</div>
+
+<div class="card related">
+
+<h2>Related Free Tools</h2>
+
+<a href="../image-compressor/">Image Compressor</a>
+<a href="../qr-code-generator/">QR Code Generator</a>
+<a href="../password-generator/">Password Generator</a>
+<a href="../word-counter/">Word Counter</a>
+<a href="../character-counter/">Character Counter</a>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 PakFreeTools — Free Online Tools
+</footer>
+
+<script>
+
+const imageInput = document.getElementById("imageInput");
+const preview = document.getElementById("preview");
+const widthInput = document.getElementById("width");
+const heightInput = document.getElementById("height");
+const resizeBtn = document.getElementById("resizeBtn");
+const lockRatio = document.getElementById("lockRatio");
+const downloadBox = document.getElementById("downloadBox");
+const downloadLink = document.getElementById("downloadLink");
+const originalInfo = document.getElementById("originalInfo");
+
+let originalWidth = 0;
+let originalHeight = 0;
+let imageFile = null;
+
+imageInput.addEventListener("change", function(){
+
+    const file = this.files[0];
+
+    if(!file){
+        return;
+    }
+
+    imageFile = file;
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+        preview.src = e.target.result;
+        preview.style.display = "block";
+
+        const img = new Image();
+
+        img.onload = function(){
+
+            originalWidth = img.width;
+            originalHeight = img.height;
+
+            widthInput.value = originalWidth;
+            heightInput.value = originalHeight;
+
+            originalInfo.innerHTML =
+                "<p><strong>Original Size:</strong> " +
+                originalWidth + " × " +
+                originalHeight + " px</p>";
+
+            resizeBtn.disabled = false;
+        };
+
+        img.src = e.target.result;
+    };
+
+    reader.readAsDataURL(file);
+
+    downloadBox.style.display = "none";
+});
+
+widthInput.addEventListener("input", function(){
+
+    if(lockRatio.checked && originalWidth > 0){
+
+        const newWidth = Number(this.value);
+
+        if(newWidth > 0){
+            heightInput.value =
+                Math.round(newWidth * originalHeight / originalWidth);
+        }
+    }
+});
+
+heightInput.addEventListener("input", function(){
+
+    if(lockRatio.checked && originalHeight > 0){
+
+        const newHeight = Number(this.value);
+
+        if(newHeight > 0){
+            widthInput.value =
+                Math.round(newHeight * originalWidth / originalHeight);
+        }
+    }
+});
+
+resizeBtn.addEventListener("click", function(){
+
+    if(!imageFile){
+        return;
+    }
+
+    const newWidth = Number(widthInput.value);
+    const newHeight = Number(heightInput.value);
+
+    if(newWidth <= 0 || newHeight <= 0){
+        alert("Please enter valid dimensions.");
+        return;
+    }
+
+    const img = new Image();
+
+    img.onload = function(){
+
+        const canvas = document.createElement("canvas");
+
+        canvas.width = newWidth;
+        canvas.height = newHeight;
+
+        const ctx = canvas.getContext("2d");
+
+        ctx.drawImage(
+            img,
+            0,
+            0,
+            newWidth,
+            newHeight
+        );
+
+        canvas.toBlob(function(blob){
+
+            const url = URL.createObjectURL(blob);
+
+            downloadLink.href = url;
+
+            downloadBox.style.display = "block";
+
+        }, "image/png");
+
+    };
+
+    img.src = URL.createObjectURL(imageFile);
+
+});
+
+</script>
+
+</body>
+</html>
