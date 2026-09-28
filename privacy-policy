@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy — PakFreeTools</title>
+
+<meta name="description" content="Read the Privacy Policy of PakFreeTools and learn how information, cookies, advertising and online tools are handled.">
+
+<meta name="keywords" content="PakFreeTools privacy policy, privacy policy, free online tools privacy">
+
+<link rel="canonical" href="https://wainceedits.github.io/PakFreeTools.-/privacy-policy/">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+    line-height:1.7;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+header{
+    background:#111827;
+    color:white;
+    padding:22px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:28px;
+}
+
+nav{
+    margin-top:8px;
+}
+
+nav a{
+    color:#dbeafe;
+    text-decoration:none;
+    margin-right:15px;
+    font-size:14px;
+}
+
+.card{
+    background:white;
+    margin-top:25px;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+h2{
+    color:#111827;
+    margin-top:30px;
+}
+
+h3{
+    color:#1d4ed8;
+}
+
+.notice{
+    background:#eef2ff;
+    padding:18px;
+    border-radius:10px;
+}
+
+a{
+    color:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:30px 10px;
+    color:#6b7280;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<h1>PakFreeTools</h1>
+
+<nav>
+<a href="../">Home</a>
+<a href="../about/">About Us</a>
+<a href="../contact/">Contact</a>
+<a href="../privacy-policy/">Privacy Policy</a>
+<a href="../terms/">Terms</a>
+</nav>
+
+</div>
+</header>
+
+<main class="container">
+
+<div class="card">
+
+<h2>Privacy Policy</h2>
+
+<p>
+<strong>Last Updated:</strong> September 28, 2026
+</p>
+
+<p>
+Welcome to PakFreeTools. We respect your privacy and are committed to
+being transparent about how information may be handled when you use our
+website.
+</p>
+
+<div class="notice">
+<strong>Important:</strong> Many PakFreeTools utilities are designed to
+process information directly in your browser. However, some features may
+use third-party services where required for the tool to function.
+</div>
+
+<h2>1. Information We Collect</h2>
+
+<p>
+PakFreeTools does not require users to create an account to use the
+website's basic tools.
+</p>
+
+<p>
+Some tools may process information that you voluntarily enter or select,
+such as text, numbers or images. Where browser-based processing is used,
+the information may remain on your device rather than being sent to our
+server.
+</p>
+
+<h2>2. Information You Provide</h2>
+
+<p>
+If you contact us by email, we may receive information that you choose to
+provide, such as your name, email address and the contents of your message.
+We use this information to respond to your request and communicate with
+you about your inquiry.
+</p>
+
+<h2>3. Cookies</h2>
+
+<p>
+PakFreeTools may use cookies or similar technologies in the future for
+website functionality, analytics or advertising purposes.
+</p>
+
+<p>
+Third-party advertising providers may also use cookies or similar
+technologies to provide and measure advertisements according to their
+own policies and applicable settings.
+</p>
+
+<h2>4. Google AdSense and Advertising</h2>
+
+<p>
+PakFreeTools may display advertisements from third-party advertising
+networks, including Google AdSense, if advertising is enabled on the
+website.
+</p>
+
+<p>
+Advertising providers may use cookies or similar technologies to
+personalize, measure or improve advertising and to understand how users
+interact with advertisements.
+</p>
+
+<p>
+Google's advertising policies and privacy practices apply to Google's
+services. Users can learn more about Google's advertising and privacy
+settings through Google's official resources.
+</p>
+
+<h2>5. Third-Party Services</h2>
+
+<p>
+Some tools may rely on third-party services or APIs. For example, a QR
+code generation feature may use an external service to create a QR code.
+When you use such a feature, information necessary for that service to
+process the request may be transmitted to the relevant third party.
+</p>
+
+<p>
+Third-party services operate under their own privacy policies and terms.
+We recommend reviewing the privacy policy of any third-party service you
+choose to use.
+</p>
+
+<h2>6. Analytics</h2>
+
+<p>
+PakFreeTools may use analytics services in the future to understand
+website traffic, improve usability and identify technical problems.
+Analytics providers may collect information such as browser type,
+device information, approximate location and pages visited.
+</p>
+
+<h2>7. Data Security</h2>
+
+<p>
+We take reasonable steps to maintain a secure and useful website.
+However, no internet transmission or electronic storage system can be
+guaranteed to be completely
