@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>All Free Online Tools | PakFreeTools</title>
 
   <meta
     name="description"
-    content="Explore all free online tools from PakFreeTools including calculators, image converters, PDF tools, document converters, typing tests and useful utilities."
+    content="Explore free online calculators, image tools, PDF converters, document tools, typing tests, text utilities, internet tools and more with PakFreeTools."
   >
+
+  <meta name="theme-color" content="#2563eb">
 
   <link
     rel="canonical"
@@ -20,178 +21,594 @@
   <link rel="stylesheet" href="../assets/style.css">
 
   <style>
+
+    /* =====================================================
+       PAKFREETOOLS — ALL TOOLS PAGE
+       ===================================================== */
+
+    :root {
+      --tools-primary: #2563eb;
+      --tools-primary-dark: #1d4ed8;
+      --tools-bg: #f7f9fc;
+      --tools-card: #ffffff;
+      --tools-border: #e5e7eb;
+      --tools-text: #101828;
+      --tools-muted: #667085;
+      --tools-radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--tools-bg);
+      color: var(--tools-text);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .tools-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(16,24,40,.08);
+    }
+
+    .tools-nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .tools-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--tools-text);
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg,#2563eb,#4f46e5);
+      color: #fff;
+      font-size: 19px;
+      box-shadow: 0 8px 20px rgba(37,99,235,.25);
+    }
+
+    .tools-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tools-nav-links a {
+      color: #475467;
+      padding: 9px 13px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .2s ease;
+    }
+
+    .tools-nav-links a:hover,
+    .tools-nav-links a.active {
+      background: #eff6ff;
+      color: var(--tools-primary);
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
     .tools-hero {
+      position: relative;
+      overflow: hidden;
       text-align: center;
-      padding: 55px 20px 30px;
+      padding: 76px 20px 55px;
+      background:
+        radial-gradient(circle at 50% 0%,
+        rgba(37,99,235,.12),
+        transparent 42%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 13px;
+      margin-bottom: 18px;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .tools-hero h1 {
-      font-size: clamp(32px, 5vw, 50px);
-      margin-bottom: 12px;
+      max-width: 850px;
+      margin: 0 auto 15px;
+      font-size: clamp(38px,6vw,62px);
+      line-height: 1.03;
+      letter-spacing: -2.8px;
+    }
+
+    .tools-hero h1 span {
+      color: var(--tools-primary);
     }
 
     .tools-hero p {
       max-width: 720px;
       margin: auto;
-      color: #667085;
+      color: var(--tools-muted);
       font-size: 17px;
       line-height: 1.7;
     }
 
+    /* =========================
+       SEARCH
+       ========================= */
+
     .tool-search {
-      max-width: 650px;
-      margin: 28px auto;
+      position: relative;
+      max-width: 700px;
+      margin: 32px auto 0;
+    }
+
+    .tool-search-icon {
+      position: absolute;
+      left: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #98a2b3;
+      font-size: 20px;
+      pointer-events: none;
     }
 
     .tool-search input {
       width: 100%;
-      padding: 15px 18px;
+      height: 60px;
+      padding: 0 20px 0 52px;
       border: 1px solid #d0d5dd;
-      border-radius: 12px;
-      font-size: 16px;
+      border-radius: 17px;
       outline: none;
+      background: #fff;
+      color: var(--tools-text);
+      font-size: 15px;
+      box-shadow:
+        0 10px 30px rgba(16,24,40,.07);
+      transition: .2s ease;
     }
 
     .tool-search input:focus {
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+      border-color: var(--tools-primary);
+      box-shadow:
+        0 0 0 4px rgba(37,99,235,.10),
+        0 12px 30px rgba(16,24,40,.08);
+    }
+
+    /* =========================
+       CATEGORIES
+       ========================= */
+
+    .category-wrapper {
+      max-width: 1120px;
+      margin: 34px auto 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .category-wrapper::-webkit-scrollbar {
+      display: none;
     }
 
     .category-buttons {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 9px;
-      margin: 20px auto 40px;
+      min-width: max-content;
     }
 
     .category-btn {
       border: 1px solid #d0d5dd;
-      background: #fff;
-      padding: 9px 16px;
+      background: rgba(255,255,255,.9);
+      color: #475467;
+      padding: 10px 15px;
       border-radius: 999px;
       cursor: pointer;
-      font-weight: 600;
-      transition: .2s;
+      font-weight: 700;
+      font-size: 13px;
+      white-space: nowrap;
+      transition: .2s ease;
     }
 
-    .category-btn:hover,
+    .category-btn:hover {
+      border-color: #93c5fd;
+      color: var(--tools-primary);
+      transform: translateY(-1px);
+    }
+
     .category-btn.active {
-      background: #2563eb;
-      color: white;
-      border-color: #2563eb;
+      background: var(--tools-primary);
+      color: #fff;
+      border-color: var(--tools-primary);
+      box-shadow: 0 7px 18px rgba(37,99,235,.22);
+    }
+
+    /* =========================
+       TOOL AREA
+       ========================= */
+
+    .tools-section {
+      padding: 10px 0 70px;
+    }
+
+    .results-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 20px;
+      color: var(--tools-muted);
+      font-size: 13px;
     }
 
     .tools-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding-bottom: 50px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
     }
 
+    /* =========================
+       TOOL CARD
+       ========================= */
+
     .tool-card {
-      background: #fff;
-      border: 1px solid #e4e7ec;
-      border-radius: 17px;
-      padding: 23px;
-      box-shadow: 0 8px 25px rgba(16,24,40,.06);
-      transition: .25s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 285px;
+      padding: 22px;
+      border: 1px solid var(--tools-border);
+      border-radius: var(--tools-radius);
+      background: var(--tools-card);
+      box-shadow: 0 7px 25px rgba(16,24,40,.055);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
     }
 
     .tool-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 35px rgba(16,24,40,.10);
+      transform: translateY(-5px);
+      border-color: #bfdbfe;
+      box-shadow: 0 18px 40px rgba(16,24,40,.10);
     }
 
     .tool-icon {
-      width: 52px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 14px;
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border-radius: 15px;
       background: #eff6ff;
-      font-size: 26px;
-      margin-bottom: 15px;
+      color: var(--tools-primary);
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .tool-category {
+      display: inline-block;
+      margin-bottom: 7px;
+      color: var(--tools-primary);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      text-transform: uppercase;
     }
 
     .tool-card h2 {
+      margin: 0 0 9px;
+      color: var(--tools-text);
       font-size: 19px;
-      margin: 0 0 8px;
+      line-height: 1.3;
+      letter-spacing: -.3px;
     }
 
     .tool-card p {
-      color: #667085;
-      line-height: 1.55;
-      min-height: 48px;
-      margin-bottom: 18px;
+      margin: 0;
+      color: var(--tools-muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .tool-content {
+      flex: 1;
     }
 
     .tool-btn {
-      display: inline-block;
-      background: #2563eb;
-      color: #fff;
-      padding: 11px 17px;
-      border-radius: 9px;
-      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      width: 100%;
+      min-height: 43px;
+      margin-top: 19px;
+      border-radius: 11px;
+      background: #f1f5f9;
+      color: #344054;
+      font-size: 13px;
+      font-weight: 800;
+      transition: .2s ease;
     }
 
     .tool-btn:hover {
-      background: #1d4ed8;
+      background: var(--tools-primary);
+      color: #fff;
     }
+
+    .tool-card.featured {
+      border-color: #bfdbfe;
+      background:
+        linear-gradient(145deg,#fff,#f8fbff);
+    }
+
+    .tool-card.featured .tool-icon {
+      background: var(--tools-primary);
+      color: #fff;
+    }
+
+    .featured-label {
+      position: absolute;
+      top: 17px;
+      right: 17px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: #ecfdf3;
+      color: #027a48;
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       NO RESULTS
+       ========================= */
 
     .no-results {
       display: none;
+      padding: 65px 20px;
       text-align: center;
+      color: var(--tools-muted);
+    }
+
+    .no-results-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .no-results h2 {
+      margin: 0 0 7px;
+      color: var(--tools-text);
+      font-size: 22px;
+    }
+
+    .no-results p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .tools-footer {
+      border-top: 1px solid var(--tools-border);
+      background: #fff;
+      padding: 30px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-copy {
       color: #667085;
-      padding: 40px 10px;
-      font-size: 18px;
+      font-size: 13px;
     }
 
-    @media (max-width: 850px) {
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: #667085;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--tools-primary);
+    }
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media (max-width: 900px) {
+
       .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
+
+      .tools-nav-links {
+        display: none;
+      }
+
     }
 
-    @media (max-width: 560px) {
-      .tools-grid {
-        grid-template-columns: 1fr;
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      .tools-nav {
+        min-height: 62px;
+      }
+
+      .tools-brand {
+        font-size: 18px;
+      }
+
+      .brand-icon {
+        width: 37px;
+        height: 37px;
+        border-radius: 11px;
       }
 
       .tools-hero {
-        padding-top: 35px;
+        padding: 55px 15px 40px;
+      }
+
+      .hero-badge {
+        font-size: 10px;
+      }
+
+      .tools-hero h1 {
+        font-size: clamp(36px,11vw,48px);
+        letter-spacing: -2px;
+      }
+
+      .tools-hero p {
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .tool-search {
+        margin-top: 25px;
+      }
+
+      .tool-search input {
+        height: 56px;
+        border-radius: 15px;
+      }
+
+      .category-wrapper {
+        margin-top: 25px;
       }
 
       .category-buttons {
         justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 5px;
       }
 
-      .category-btn {
-        white-space: nowrap;
+      .tools-section {
+        padding-bottom: 50px;
+      }
+
+      .results-info {
+        margin-bottom: 15px;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .tool-card {
+        min-height: 0;
+        padding: 19px;
+        border-radius: 17px;
+      }
+
+      .tool-card h2 {
+        font-size: 17px;
+      }
+
+      .tool-icon {
+        width: 49px;
+        height: 49px;
+        border-radius: 13px;
+        font-size: 22px;
+      }
+
+      .tool-btn {
+        min-height: 45px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
       }
     }
+
+    /* =========================
+       SMALL PHONES
+       ========================= */
+
+    @media (max-width: 380px) {
+
+      .tools-hero h1 {
+        font-size: 35px;
+      }
+
+      .tools-hero {
+        padding-top: 42px;
+      }
+
+      .tool-card {
+        padding: 17px;
+      }
+    }
+
   </style>
 
-  <!-- Breadcrumb SEO -->
+  <!-- Breadcrumb -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "PakFreeTools",
-        "item": "https://wainceedits.github.io/PakFreeTools.-/"
+        "@type":"ListItem",
+        "position":1,
+        "name":"PakFreeTools",
+        "item":"https://wainceedits.github.io/PakFreeTools.-/"
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "All Tools",
-        "item": "https://wainceedits.github.io/PakFreeTools.-/tools/"
+        "@type":"ListItem",
+        "position":2,
+        "name":"All Tools",
+        "item":"https://wainceedits.github.io/PakFreeTools.-/tools/"
       }
     ]
   }
@@ -201,81 +618,128 @@
 
 <body>
 
-<header>
-  <div class="container nav">
+<!-- =========================
+     HEADER
+     ========================= -->
 
-    <a class="brand" href="../">
-      PakFreeTools
+<header class="tools-header">
+
+  <div class="container tools-nav">
+
+    <a class="tools-brand" href="../">
+      <span class="brand-icon">⚡</span>
+      <span>PakFreeTools</span>
     </a>
 
-    <nav>
-      <a href="../">Home</a>
-      <a href="./">All Tools</a>
+    <nav class="tools-nav-links">
+
+      <a href="../">
+        Home
+      </a>
+
+      <a href="./" class="active">
+        All Tools
+      </a>
+
+      <a href="../about/">
+        About
+      </a>
+
+      <a href="../contact/">
+        Contact
+      </a>
+
     </nav>
 
   </div>
+
 </header>
 
 
 <main>
 
+  <!-- =========================
+       HERO
+       ========================= -->
+
   <section class="tools-hero">
 
     <div class="container">
 
-      <h1>All Free Online Tools</h1>
+      <div class="hero-badge">
+        ⚡ Free • Fast • Browser Based
+      </div>
+
+      <h1>
+        All Free <span>Online Tools</span>
+      </h1>
 
       <p>
-        Explore our collection of free online tools for calculations,
-        images, PDFs, documents, typing, text and everyday tasks.
+        Powerful and easy-to-use tools for calculations, images,
+        PDFs, documents, text, typing, internet testing and everyday tasks.
       </p>
 
 
       <div class="tool-search">
+
+        <span class="tool-search-icon">
+          🔍
+        </span>
 
         <input
           type="search"
           id="toolSearch"
           placeholder="Search for a tool..."
           autocomplete="off"
+          aria-label="Search tools"
         >
 
       </div>
 
 
-      <div class="category-buttons">
+      <!-- CATEGORIES -->
 
-        <button class="category-btn active" data-category="all">
-          All
-        </button>
+      <div class="category-wrapper">
 
-        <button class="category-btn" data-category="calculator">
-          Calculators
-        </button>
+        <div class="category-buttons">
 
-        <button class="category-btn" data-category="image">
-          Image Tools
-        </button>
+          <button class="category-btn active" data-category="all">
+            All Tools
+          </button>
 
-        <button class="category-btn" data-category="pdf">
-          PDF Tools
-        </button>
+          <button class="category-btn" data-category="calculator">
+            🧮 Calculators
+          </button>
 
-        <button class="category-btn" data-category="document">
-          Documents
-        </button>
+          <button class="category-btn" data-category="internet">
+            🌐 Internet
+          </button>
 
-        <button class="category-btn" data-category="typing">
-          Typing Tests
-        </button>
+          <button class="category-btn" data-category="image">
+            🖼️ Images
+          </button>
 
-        <button class="category-btn" data-category="text">
-          Text Tools
-        </button>
+          <button class="category-btn" data-category="pdf">
+            📄 PDF
+          </button>
 
-        <button class="category-btn" data-category="utility">
-          Utilities
-        </button>
+          <button class="category-btn" data-category="document">
+            📝 Documents
+          </button>
+
+          <button class="category-btn" data-category="typing">
+            ⌨️ Typing
+          </button>
+
+          <button class="category-btn" data-category="text">
+            🔤 Text
+          </button>
+
+          <button class="category-btn" data-category="utility">
+            🛠️ Utilities
+          </button>
+
+        </div>
 
       </div>
 
@@ -284,426 +748,675 @@
   </section>
 
 
-  <section class="container">
+  <!-- =========================
+       TOOLS
+       ========================= -->
 
-    <div class="tools-grid" id="toolsGrid">
+  <section class="tools-section">
+
+    <div class="container">
+
+      <div class="results-info">
+
+        <span id="resultsText">
+          Showing all tools
+        </span>
+
+        <span>
+          Free to use
+        </span>
+
+      </div>
 
 
-      <!-- CALCULATORS -->
+      <div class="tools-grid" id="toolsGrid">
 
-      <article class="tool-card" data-category="calculator">
 
-        <div class="tool-icon">%</div>
+        <!-- CALCULATORS -->
 
-        <h2>Percentage Calculator</h2>
+        <article class="tool-card" data-category="calculator">
+
+          <div class="tool-icon">%</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Calculator
+            </span>
+
+            <h2>Percentage Calculator</h2>
+
+            <p>
+              Calculate percentages quickly and easily.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../percentage-calculator/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="calculator">
+
+          <div class="tool-icon">🎂</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Calculator
+            </span>
+
+            <h2>Age Calculator</h2>
+
+            <p>
+              Calculate your exact age from your date of birth.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../age-calculator/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="calculator">
+
+          <div class="tool-icon">⚖️</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Calculator
+            </span>
+
+            <h2>BMI Calculator</h2>
+
+            <p>
+              Calculate BMI using height and weight.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../bmi-calculator/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="calculator">
+
+          <div class="tool-icon">🏷️</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Calculator
+            </span>
+
+            <h2>Discount Calculator</h2>
+
+            <p>
+              Calculate discounts and final prices instantly.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../discount-calculator/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="calculator">
+
+          <div class="tool-icon">📈</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Calculator
+            </span>
+
+            <h2>Profit Loss Calculator</h2>
+
+            <p>
+              Calculate profit, loss and percentage.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../profit-loss-calculator/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <!-- INTERNET -->
+
+        <article
+          class="tool-card featured"
+          data-category="internet"
+        >
+
+          <span class="featured-label">
+            Popular
+          </span>
+
+          <div class="tool-icon">🚀</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Internet Tool
+            </span>
+
+            <h2>Internet Speed Test</h2>
+
+            <p>
+              Test your internet download speed, upload speed
+              and connection performance.
+            </p>
+
+          </div>
+
+          <a
+            class="tool-btn"
+            href="../internet-speed-test/"
+          >
+            Test Speed →
+          </a>
+
+        </article>
+
+
+        <!-- IMAGE TOOLS -->
+
+        <article class="tool-card" data-category="image">
+
+          <div class="tool-icon">🖼️</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Image Tool
+            </span>
+
+            <h2>JPG to PNG Converter</h2>
+
+            <p>
+              Convert JPG and JPEG images to PNG format.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../jpg-to-png/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="image">
+
+          <div class="tool-icon">🖼️</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Image Tool
+            </span>
+
+            <h2>PNG to JPG Converter</h2>
+
+            <p>
+              Convert PNG images to JPG format.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../png-to-jpg/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="image">
+
+          <div class="tool-icon">📐</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Image Tool
+            </span>
+
+            <h2>Image Resizer</h2>
+
+            <p>
+              Resize images directly in your browser.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../image-resizer/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="image">
+
+          <div class="tool-icon">🗜️</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Image Tool
+            </span>
+
+            <h2>Image Compressor</h2>
+
+            <p>
+              Compress images and reduce their file size.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../image-compressor/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <!-- PDF -->
+
+        <article class="tool-card" data-category="pdf">
+
+          <div class="tool-icon">📄</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              PDF Tool
+            </span>
+
+            <h2>JPG to PDF Converter</h2>
+
+            <p>
+              Convert one or multiple JPG images into PDF.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../jpg-to-pdf/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="pdf">
+
+          <div class="tool-icon">📑</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              PDF Tool
+            </span>
+
+            <h2>PDF to JPG Converter</h2>
+
+            <p>
+              Convert PDF pages into JPG images.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../pdf-to-jpg/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <!-- DOCUMENT -->
+
+        <article class="tool-card" data-category="document">
+
+          <div class="tool-icon">📝</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Document
+            </span>
+
+            <h2>Word to PDF Converter</h2>
+
+            <p>
+              Convert Word DOCX documents into PDF.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../word-to-pdf/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="document">
+
+          <div class="tool-icon">📃</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Document
+            </span>
+
+            <h2>PDF to Word Converter</h2>
+
+            <p>
+              Extract PDF text into a Word-compatible document.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../pdf-to-word/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="document">
+
+          <div class="tool-icon">📊</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Document
+            </span>
+
+            <h2>Word to Excel Converter</h2>
+
+            <p>
+              Extract Word document text into Excel.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../word-to-excel/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <!-- TYPING -->
+
+        <article class="tool-card" data-category="typing">
+
+          <div class="tool-icon">⌨️</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Typing Test
+            </span>
+
+            <h2>English Typing Test</h2>
+
+            <p>
+              Test your English typing speed and accuracy.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../english-typing-test/">
+            Start Test →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="typing">
+
+          <div class="tool-icon">⌨️</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Typing Test
+            </span>
+
+            <h2>Urdu Typing Test</h2>
+
+            <p>
+              Practice Urdu typing and check your speed.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../urdu-typing-test/">
+            Start Test →
+          </a>
+
+        </article>
+
+
+        <!-- TEXT -->
+
+        <article class="tool-card" data-category="text">
+
+          <div class="tool-icon">🔤</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Text Tool
+            </span>
+
+            <h2>Word Counter</h2>
+
+            <p>
+              Count words and characters in your text.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../word-counter/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="text">
+
+          <div class="tool-icon">🔢</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Text Tool
+            </span>
+
+            <h2>Character Counter</h2>
+
+            <p>
+              Count characters instantly.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../character-counter/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="text">
+
+          <div class="tool-icon">Aa</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Text Tool
+            </span>
+
+            <h2>Case Converter</h2>
+
+            <p>
+              Convert text to uppercase, lowercase and title case.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../case-converter/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <!-- UTILITIES -->
+
+        <article class="tool-card" data-category="utility">
+
+          <div class="tool-icon">▦</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Utility
+            </span>
+
+            <h2>QR Code Generator</h2>
+
+            <p>
+              Generate QR codes from text, URLs and information.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../qr-code-generator/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="utility">
+
+          <div class="tool-icon">🔐</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Utility
+            </span>
+
+            <h2>Password Generator</h2>
+
+            <p>
+              Generate strong random passwords.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../password-generator/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="utility">
+
+          <div class="tool-icon">🎲</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Utility
+            </span>
+
+            <h2>Random Number Generator</h2>
+
+            <p>
+              Generate random numbers instantly.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../random-number-generator/">
+            Open Tool →
+          </a>
+
+        </article>
+
+
+        <article class="tool-card" data-category="utility">
+
+          <div class="tool-icon">📐</div>
+
+          <div class="tool-content">
+
+            <span class="tool-category">
+              Utility
+            </span>
+
+            <h2>Unit Converter</h2>
+
+            <p>
+              Convert length, weight, temperature and other units.
+            </p>
+
+          </div>
+
+          <a class="tool-btn" href="../unit-converter/">
+            Open Tool →
+          </a>
+
+        </article>
+
+      </div>
+
+
+      <!-- NO RESULTS -->
+
+      <div class="no-results" id="noResults">
+
+        <div class="no-results-icon">
+          🔎
+        </div>
+
+        <h2>No tools found</h2>
 
         <p>
-          Calculate percentages quickly and easily.
+          Try another keyword or choose a different category.
         </p>
 
-        <a class="tool-btn" href="../percentage-calculator/">
-          Open Tool
-        </a>
+      </div>
 
-      </article>
-
-
-      <article class="tool-card" data-category="calculator">
-
-        <div class="tool-icon">🎂</div>
-
-        <h2>Age Calculator</h2>
-
-        <p>
-          Calculate your exact age from your date of birth.
-        </p>
-
-        <a class="tool-btn" href="../age-calculator/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="calculator">
-
-        <div class="tool-icon">⚖️</div>
-
-        <h2>BMI Calculator</h2>
-
-        <p>
-          Calculate BMI using height and weight.
-        </p>
-
-        <a class="tool-btn" href="../bmi-calculator/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="calculator">
-
-        <div class="tool-icon">🏷️</div>
-
-        <h2>Discount Calculator</h2>
-
-        <p>
-          Calculate discounts and final prices instantly.
-        </p>
-
-        <a class="tool-btn" href="../discount-calculator/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="calculator">
-
-        <div class="tool-icon">📈</div>
-
-        <h2>Profit Loss Calculator</h2>
-
-        <p>
-          Calculate profit, loss and percentage.
-        </p>
-
-        <a class="tool-btn" href="../profit-loss-calculator/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-
-      <!-- IMAGE TOOLS -->
-
-      <article class="tool-card" data-category="image">
-
-        <div class="tool-icon">🖼️</div>
-
-        <h2>JPG to PNG Converter</h2>
-
-        <p>
-          Convert JPG and JPEG images to PNG format.
-        </p>
-
-        <a class="tool-btn" href="../jpg-to-png/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="image">
-
-        <div class="tool-icon">🖼️</div>
-
-        <h2>PNG to JPG Converter</h2>
-
-        <p>
-          Convert PNG images to JPG format.
-        </p>
-
-        <a class="tool-btn" href="../png-to-jpg/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="image">
-
-        <div class="tool-icon">📐</div>
-
-        <h2>Image Resizer</h2>
-
-        <p>
-          Resize images directly in your browser.
-        </p>
-
-        <a class="tool-btn" href="../image-resizer/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="image">
-
-        <div class="tool-icon">🗜️</div>
-
-        <h2>Image Compressor</h2>
-
-        <p>
-          Compress images and reduce their file size.
-        </p>
-
-        <a class="tool-btn" href="../image-compressor/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-
-      <!-- PDF TOOLS -->
-
-      <article class="tool-card" data-category="pdf">
-
-        <div class="tool-icon">📄</div>
-
-        <h2>JPG to PDF Converter</h2>
-
-        <p>
-          Convert one or multiple JPG images into PDF.
-        </p>
-
-        <a class="tool-btn" href="../jpg-to-pdf/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="pdf">
-
-        <div class="tool-icon">📑</div>
-
-        <h2>PDF to JPG Converter</h2>
-
-        <p>
-          Convert PDF pages into JPG images.
-        </p>
-
-        <a class="tool-btn" href="../pdf-to-jpg/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-
-      <!-- DOCUMENT TOOLS -->
-
-      <article class="tool-card" data-category="document">
-
-        <div class="tool-icon">📝</div>
-
-        <h2>Word to PDF Converter</h2>
-
-        <p>
-          Convert Word DOCX documents into PDF.
-        </p>
-
-        <a class="tool-btn" href="../word-to-pdf/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="document">
-
-        <div class="tool-icon">📃</div>
-
-        <h2>PDF to Word Converter</h2>
-
-        <p>
-          Extract PDF text into a Word-compatible document.
-        </p>
-
-        <a class="tool-btn" href="../pdf-to-word/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="document">
-
-        <div class="tool-icon">📊</div>
-
-        <h2>Word to Excel Converter</h2>
-
-        <p>
-          Extract Word document text into Excel.
-        </p>
-
-        <a class="tool-btn" href="../word-to-excel/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-
-      <!-- TYPING -->
-
-      <article class="tool-card" data-category="typing">
-
-        <div class="tool-icon">⌨️</div>
-
-        <h2>English Typing Test</h2>
-
-        <p>
-          Test your English typing speed and accuracy.
-        </p>
-
-        <a class="tool-btn" href="../english-typing-test/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="typing">
-
-        <div class="tool-icon">⌨️</div>
-
-        <h2>Urdu Typing Test</h2>
-
-        <p>
-          Practice Urdu typing and check your speed.
-        </p>
-
-        <a class="tool-btn" href="../urdu-typing-test/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-
-      <!-- TEXT TOOLS -->
-
-      <article class="tool-card" data-category="text">
-
-        <div class="tool-icon">🔤</div>
-
-        <h2>Word Counter</h2>
-
-        <p>
-          Count words and characters in your text.
-        </p>
-
-        <a class="tool-btn" href="../word-counter/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="text">
-
-        <div class="tool-icon">🔢</div>
-
-        <h2>Character Counter</h2>
-
-        <p>
-          Count characters instantly.
-        </p>
-
-        <a class="tool-btn" href="../character-counter/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="text">
-
-        <div class="tool-icon">Aa</div>
-
-        <h2>Case Converter</h2>
-
-        <p>
-          Convert text to uppercase, lowercase and title case.
-        </p>
-
-        <a class="tool-btn" href="../case-converter/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-
-      <!-- UTILITIES -->
-
-      <article class="tool-card" data-category="utility">
-
-        <div class="tool-icon">▦</div>
-
-        <h2>QR Code Generator</h2>
-
-        <p>
-          Generate QR codes from text, URLs and information.
-        </p>
-
-        <a class="tool-btn" href="../qr-code-generator/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="utility">
-
-        <div class="tool-icon">🔐</div>
-
-        <h2>Password Generator</h2>
-
-        <p>
-          Generate strong random passwords.
-        </p>
-
-        <a class="tool-btn" href="../password-generator/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="utility">
-
-        <div class="tool-icon">🎲</div>
-
-        <h2>Random Number Generator</h2>
-
-        <p>
-          Generate random numbers instantly.
-        </p>
-
-        <a class="tool-btn" href="../random-number-generator/">
-          Open Tool
-        </a>
-
-      </article>
-
-
-      <article class="tool-card" data-category="utility">
-
-        <div class="tool-icon">📐</div>
-
-        <h2>Unit Converter</h2>
-
-        <p>
-          Convert length, weight, temperature and other units.
-        </p>
-
-        <a class="tool-btn" href="../unit-converter/">
-          Open Tool
-        </a>
-
-      </article>
-
-    </div>
-
-
-    <div class="no-results" id="noResults">
-      No tools found. Try another search.
     </div>
 
   </section>
@@ -711,22 +1424,28 @@
 </main>
 
 
-<footer>
+<!-- =========================
+     FOOTER
+     ========================= -->
 
-  <div class="container footer">
+<footer class="tools-footer">
 
-    <div>
-      © 2026 PakFreeTools
+  <div class="container footer-inner">
+
+    <div class="footer-copy">
+      © 2026 PakFreeTools. Free online tools for everyone.
     </div>
 
-    <div>
+    <div class="footer-links">
+
       <a href="../about/">About</a>
-      ·
+
       <a href="../contact/">Contact</a>
-      ·
+
       <a href="../privacy-policy/">Privacy</a>
-      ·
+
       <a href="../terms/">Terms</a>
+
     </div>
 
   </div>
@@ -736,80 +1455,131 @@
 
 <script>
 
-const searchInput = document.getElementById("toolSearch");
-const cards = document.querySelectorAll(".tool-card");
-const buttons = document.querySelectorAll(".category-btn");
-const noResults = document.getElementById("noResults");
+  const searchInput =
+    document.getElementById("toolSearch");
 
-let selectedCategory = "all";
+  const cards =
+    document.querySelectorAll(".tool-card");
+
+  const buttons =
+    document.querySelectorAll(".category-btn");
+
+  const noResults =
+    document.getElementById("noResults");
+
+  const resultsText =
+    document.getElementById("resultsText");
+
+  let selectedCategory = "all";
 
 
-function filterTools() {
+  function filterTools() {
 
-  const search = searchInput.value
-    .toLowerCase()
-    .trim();
+    const search =
+      searchInput.value
+        .toLowerCase()
+        .trim();
 
-  let visible = 0;
+    let visible = 0;
 
-  cards.forEach(card => {
 
-    const text = card.innerText.toLowerCase();
+    cards.forEach(card => {
 
-    const category = card.dataset.category;
+      const text =
+        card.innerText.toLowerCase();
 
-    const matchesSearch =
-      text.includes(search);
+      const category =
+        card.dataset.category;
 
-    const matchesCategory =
-      selectedCategory === "all" ||
-      category === selectedCategory;
 
-    if (matchesSearch && matchesCategory) {
+      const matchesSearch =
+        text.includes(search);
 
-      card.style.display = "";
 
-      visible++;
+      const matchesCategory =
+        selectedCategory === "all" ||
+        category === selectedCategory;
+
+
+      if (
+        matchesSearch &&
+        matchesCategory
+      ) {
+
+        card.style.display = "";
+
+        visible++;
+
+      } else {
+
+        card.style.display = "none";
+
+      }
+
+    });
+
+
+    noResults.style.display =
+      visible === 0 ? "block" : "none";
+
+
+    if (search) {
+
+      resultsText.textContent =
+        `${visible} tool${visible === 1 ? "" : "s"} found`;
+
+    } else if (
+      selectedCategory !== "all"
+    ) {
+
+      const active =
+        document.querySelector(
+          ".category-btn.active"
+        );
+
+      resultsText.textContent =
+        `${visible} tools in ${active ? active.textContent.trim() : "this category"}`;
 
     } else {
 
-      card.style.display = "none";
+      resultsText.textContent =
+        `Showing ${visible} free tools`;
 
     }
 
-  });
+  }
 
 
-  noResults.style.display =
-    visible === 0 ? "block" : "none";
-
-}
-
-
-searchInput.addEventListener(
-  "input",
-  filterTools
-);
+  searchInput.addEventListener(
+    "input",
+    filterTools
+  );
 
 
-buttons.forEach(button => {
+  buttons.forEach(button => {
 
-  button.addEventListener("click", () => {
+    button.addEventListener(
+      "click",
+      () => {
 
-    buttons.forEach(btn =>
-      btn.classList.remove("active")
+        buttons.forEach(btn =>
+          btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        selectedCategory =
+          button.dataset.category;
+
+        filterTools();
+
+      }
     );
 
-    button.classList.add("active");
-
-    selectedCategory =
-      button.dataset.category;
-
-    filterTools();
-
   });
 
-});
+
+  filterTools();
 
 </script>
 
