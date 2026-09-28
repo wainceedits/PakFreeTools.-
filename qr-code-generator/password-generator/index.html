@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Password Generator — Free Strong Password Generator | PakFreeTools</title>
+
+  <meta name="description" content="Generate strong random passwords online for free. Choose password length and include uppercase letters, lowercase letters, numbers and symbols.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical"
+        href="https://wainceedits.github.io/PakFreeTools.-/password-generator/">
+
+  <meta property="og:title"
+        content="Password Generator — Free Strong Password Generator">
+
+  <meta property="og:description"
+        content="Create strong random passwords with letters, numbers and symbols using this free password generator.">
+
+  <meta property="og:type"
+        content="website">
+
+  <meta property="og:url"
+        content="https://wainceedits.github.io/PakFreeTools.-/password-generator/">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .home {
+      color: white;
+      text-decoration: none;
+      background: #2563eb;
+      padding: 9px 15px;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 35px auto;
+      padding: 0 18px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #6b7280;
+    }
+
+    .tool-box,
+    .content {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.07);
+    }
+
+    .password-box {
+      display: flex;
+      gap: 10px;
+    }
+
+    #password {
+      flex: 1;
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      font-size: 18px;
+      font-family: monospace;
+    }
+
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 17px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      opacity: .9;
+    }
+
+    .copy {
+      background: #16a34a;
+    }
+
+    .options {
+      margin-top: 20px;
+    }
+
+    .length-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin: 12px 0 20px;
+    }
+
+    .option {
+      margin: 12px 0;
+    }
+
+    .option label {
+      cursor: pointer;
+    }
+
+    .generate {
+      width: 100%;
+      margin-top: 15px;
+      padding: 14px;
+      font-size: 16px;
+    }
+
+    .message {
+      text-align: center;
+      color: #16a34a;
+      min-height: 22px;
+      margin-top: 12px;
+    }
+
+    .content {
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #111827;
+      margin-top: 25px;
+    }
+
+    .related a {
+      display: inline-block;
+      margin: 5px 8px 5px 0;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .tool-box,
+      .content {
+        padding: 18px;
+      }
+
+      .password-box {
+        flex-direction: column;
+      }
+
+      #password {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="nav">
+
+    <div class="logo">
+      PakFreeTools
+    </div>
+
+    <a class="home" href="../">
+      Home
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <section class="hero">
+
+    <h1>Password Generator</h1>
+
+    <p>
+      Generate strong random passwords quickly and easily.
+    </p>
+
+  </section>
+
+
+  <section class="tool-box">
+
+    <div class="password-box">
+
+      <input
+        type="text"
+        id="password"
+        readonly
+        placeholder="Your password will appear here"
+      >
+
+      <button class="copy" onclick="copyPassword()">
+        Copy
+      </button>
+
+    </div>
+
+
+    <div class="options">
+
+      <div class="length-row">
+
+        <strong>Password Length</strong>
+
+        <strong id="lengthValue">16</strong>
+
+      </div>
+
+      <input
+        type="range"
+        id="length"
+        min="6"
+        max="64"
+        value="16"
+        oninput="updateLength()"
+      >
+
+
+      <div class="option">
+
+        <label>
+          <input
+            type="checkbox"
+            id="uppercase"
+            checked
+          >
+          Uppercase Letters (A-Z)
+        </label>
+
+      </div>
+
+
+      <div class="option">
+
+        <label>
+          <input
+            type="checkbox"
+            id="lowercase"
+            checked
+          >
+          Lowercase Letters (a-z)
+        </label>
+
+      </div>
+
+
+      <div class="option">
+
+        <label>
+          <input
+            type="checkbox"
+            id="numbers"
+            checked
+          >
+          Numbers (0-9)
+        </label>
+
+      </div>
+
+
+      <div class="option">
+
+        <label>
+          <input
+            type="checkbox"
+            id="symbols"
+            checked
+          >
+          Symbols (!@#$%)
+        </label>
+
+      </div>
+
+
+      <button
+        class="generate"
+        onclick="generatePassword()"
+      >
+        Generate Password
+      </button>
+
+      <div id="message" class="message"></div>
+
+    </div>
+
+  </section>
+
+
+  <section class="content">
+
+    <h2>Free Strong Password Generator</h2>
+
+    <p>
+      PakFreeTools Password Generator creates random passwords using the
+      character types you select. You can choose the password length and
+      include uppercase letters, lowercase letters, numbers and symbols.
+    </p>
+
+
+    <h2>How to Generate a Password</h2>
+
+    <ol>
+      <li>Select your desired password length.</li>
+      <li>Choose the character types you want.</li>
+      <li>Click Generate Password.</li>
+      <li>Use Copy to copy the generated password.</li>
+    </ol>
+
+
+    <h2>Why Use a Strong Password?</h2>
+
+    <p>
+      Strong and unique passwords can help protect online accounts from
+      unauthorized access. Using different passwords for different accounts
+      is also a useful security practice.
+    </p>
+
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Is this password generator free?</h3>
+
+    <p>
+      Yes. It is free to use and does not require registration.
+    </p>
+
+
+    <h3>How long can the password be?</h3>
+
+    <p>
+      You can generate passwords from 6 to 64 characters long.
+    </p>
+
+
+    <h3>Can I include numbers and symbols?</h3>
+
+    <p>
+      Yes. You can independently choose uppercase letters, lowercase
+      letters, numbers and symbols.
+    </p>
+
+
+    <h3>Does the tool save my password?</h3>
+
+    <p>
+      The generated password is displayed in your browser and is not saved
+      by this page.
+    </p>
+
+
+    <h2>Related Free Tools</h2>
+
+    <div class="related">
+
+      <a href="../qr-code-generator/">
+        QR Code Generator
+      </a>
+
+      <a href="../word-counter/">
+        Word Counter
+      </a>
+
+      <a href="../character-counter/">
+        Character Counter
+      </a>
+
+      <a href="../case-converter/">
+        Case Converter
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  © 2026 PakFreeTools — Free Online Tools
+
+</footer>
+
+
+<script>
+
+function updateLength() {
+
+  const length =
+    document.getElementById("length").value;
+
+  document.getElementById("lengthValue")
+    .textContent = length;
+}
+
+
+function randomInt(max) {
+
+  const array =
+    new Uint32Array(1);
+
+  crypto.getRandomValues(array);
+
+  return array[0] % max;
+}
+
+
+function generatePassword() {
+
+  const length =
+    Number(document.getElementById("length").value);
+
+  const uppercase =
+    document.getElementById("uppercase").checked;
+
+  const lowercase =
+    document.getElementById("lowercase").checked;
+
+  const numbers =
+    document.getElementById("numbers").checked;
+
+  const symbols =
+    document.getElementById("symbols").checked;
+
+
+  let characters = "";
+
+  if (uppercase) {
+    characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }
+
+  if (lowercase) {
+    characters += "abcdefghijklmnopqrstuvwxyz";
+  }
+
+  if (numbers) {
+    characters += "0123456789";
+  }
+
+  if (symbols) {
+    characters += "!@#$%^&*()_+-=[]{}";
+  }
+
+
+  const message =
+    document.getElementById("message");
+
+
+  if (!characters) {
+
+    message.textContent =
+      "Please select at least one character type.";
+
+    return;
+  }
+
+
+  let password = "";
+
+
+  for (let i = 0; i < length; i++) {
+
+    password +=
+      characters[randomInt(characters.length)];
+
+  }
+
+
+  document.getElementById("password").value =
+    password;
+
+  message.textContent =
+    "New password generated.";
+
+  setTimeout(() => {
+    message.textContent = "";
+  }, 2000);
+
+}
+
+
+async function copyPassword() {
+
+  const password =
+    document.getElementById("password").value;
+
+  const message =
+    document.getElementById("message");
+
+
+  if (!password) {
+
+    message.textContent =
+      "Generate a password first.";
+
+    return;
+  }
+
+
+  try {
+
+    await navigator.clipboard.writeText(password);
+
+    message.textContent =
+      "Password copied.";
+
+  } catch (error) {
+
+    const input =
+      document.getElementById("password");
+
+    input.select();
+
+    document.execCommand("copy");
+
+    message.textContent =
+      "Password copied.";
+
+  }
+
+
+  setTimeout(() => {
+    message.textContent = "";
+  }, 2000);
+
+}
+
+
+generatePassword();
+
+</script>
+
+</body>
+</html>
